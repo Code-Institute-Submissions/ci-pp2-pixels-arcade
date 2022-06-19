@@ -170,6 +170,74 @@ function spawnBoss() {
   squares[currentPosition].classList.add("tank")
 } 
 
+/**
+ * shoot function to create and move the missile and kill invaders.
+ * Can trigger with up arrow, space or fire button on page
+ */ 
+function shoot(event) {
+  let missileId
+  let missilePosition = currentPosition
+
+  function movemissile() {
+    squares[missilePosition].classList.remove("missile")
+    missilePosition -= width
+    squares[missilePosition].classList.add("missile")
+
+    if (missilePosition <= 14) {
+      squares[missilePosition].classList.remove("missile")
+      clearInterval(missileId)
+      return
+    }
+      
+    if (squares[missilePosition].classList.contains("invader")) {
+      squares[missilePosition].classList.remove("missile")
+      squares[missilePosition].classList.remove("invader")
+      squares[missilePosition].classList.add("boom")
+
+      setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
+      clearInterval(missileId)
+
+      const invaderRemoved = invaders.indexOf(missilePosition)
+      invadersRemoved.push(invaderRemoved)
+      points++
+      score.innerHTML = points
+      checkEnd()
+    }
+
+    if (squares[missilePosition].classList.contains("boss") && bossHealth > 10) {
+      squares[missilePosition].classList.remove("missile")
+      squares[missilePosition].classList.add("boom")
+      bossHealth -= 10
+      setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
+      clearInterval(missileId)
+      
+      } else if (squares[missilePosition].classList.contains("boss") && bossHealth <= 10) {
+      squares[missilePosition].classList.remove("missile")
+      squares[missilePosition].classList.remove("boss")
+      squares[missilePosition].classList.add("boom")
+
+      clearInterval(bossId)
+      setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
+      clearInterval(missileId)
+      bossDied = true
+      clearInterval(bombInterval)
+      points++
+      score.innerHTML = points
+      checkEnd()
+      }
+  }
+
+  if (event.key === "ArrowUp" || event.keyCode === 32 || event.target.id === "fire") {
+    missileId = setInterval(movemissile, 100)
+    document.removeEventListener("keydown", shoot)
+    fire.removeEventListener("click", shoot)
+    setTimeout(() => {
+      document.addEventListener("keydown", shoot)
+      fire.addEventListener("click", shoot)
+    }, intervalTime)
+  }
+}
+
 
 squares[currentPosition].classList.add("tank")
 //Our event listeners
