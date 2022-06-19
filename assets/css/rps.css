@@ -1,3 +1,8 @@
+/* Custom variables */
+:root {
+  --apple-black: #282828;
+}
+
 /* Styling for overall board layout */
 #board {
   max-width: 100%;
@@ -19,7 +24,7 @@
 
 .current-level {
   font-weight: 700;
-  background-color: #575555;
+  background-color: var(--apple-black);
   border: none;
 }
 

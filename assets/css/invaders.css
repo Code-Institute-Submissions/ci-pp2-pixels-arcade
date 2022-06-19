@@ -1,3 +1,9 @@
+/* Custom variables */
+:root {
+  --apple-light-green: #25C40D;
+  --apple-black: #282828;
+}
+
 /* Styling for game board */
 #board {
   width: 308px;
@@ -7,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 20px auto;
-  background-color: #282828;
+  background-color: var(--apple-black);
   box-shadow: 10px 10px 15px;
 }
 
@@ -70,6 +76,7 @@
 }
 
 #fire {
-  background-color: #282828;
-  color:#25c40d;
+  background-color: var(--apple-black);
+  color: var(--apple-light-green);
+  font-weight: 700;
 }

@@ -1,3 +1,8 @@
+/* Custom variables */
+:root {
+  --apple-black: #282828;
+}
+
 /* Time and score styling */
 #timer, #scoreboard {
   font-size: 0.75rem;
@@ -31,7 +36,7 @@
   flex-wrap: wrap;
   border-radius: 20px;
   padding-bottom: 16px;
-  box-shadow: 10px 10px 5px #282828;
+  box-shadow: 10px 10px 5px var(--apple-black);
 }
 
 .hole {
