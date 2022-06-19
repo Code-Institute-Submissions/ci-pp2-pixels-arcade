@@ -50,16 +50,16 @@ const invaders = [
 // Function to add invaders to the board
 function draw() {
   for (let i = 0; i < invaders.length; i++) {
-      if (!invadersRemoved.includes(i)){
-          squares[invaders[i]].classList.add("invader")
-      }
+    if (!invadersRemoved.includes(i)){
+      squares[invaders[i]].classList.add("invader")
+    }
   }
 }
 
 // Function to remove invaders from the board
 function remove() {
   for (let i = 0; i < invaders.length; i++) {
-      squares[invaders[i]].classList.remove("invader")
+    squares[invaders[i]].classList.remove("invader")
   }
 }
 
@@ -71,23 +71,23 @@ function moveInvaders() {
 
   // Bounces the invaders off the edges of the screen. If noWrap === false invaders can wrap instead
   if (rightEdge && goingRight && noWrap === true) {
-      for (let i = 0; i < invaders.length; i++) {
-          invaders[i] += width + 1
-          direction = - 1
-          goingRight = false
-      }
+    for (let i = 0; i < invaders.length; i++) {
+      invaders[i] += width + 1
+      direction = - 1
+      goingRight = false
+    }
   }
 
   if (leftEdge && !goingRight && noWrap === true) {
-      for (let i = 0; i < invaders.length; i++) {
-          invaders[i] += width - 1
-          direction = 1
-          goingRight = true
-      }
+    for (let i = 0; i < invaders.length; i++) {
+      invaders[i] += width - 1
+      direction = 1
+      goingRight = true
+    }
   }
 
   for (let i = 0; i < invaders.length; i++) {
-      invaders[i] += direction
+    invaders[i] += direction
   }
   
   draw() 
@@ -121,6 +121,35 @@ function spawnBoss() {
     bossGoingRight = true
     }
    
+  }
+}
+
+/**
+ * function for boss to drop bombs and kill the tank
+ */
+ function dropBomb() {
+  let bombId  = setInterval(moveBomb, 200)
+  let bombPosition = bossPosition
+  
+  function moveBomb() {
+    squares[bombPosition].classList.remove("bomb")
+    bombPosition += width
+    squares[bombPosition].classList.add("bomb")
+
+    if (bombPosition > (squares.length - 15)) {
+      squares[bombPosition].classList.remove("bomb")
+      clearInterval(bombId)
+      return
+    }
+
+    if (squares[bombPosition].classList.contains("tank")) {
+      squares[bombPosition].classList.remove("bomb")
+      squares[bombPosition].classList.add("boom")
+      setTimeout(() => squares[bombPosition].classList.remove("boom"), 200)
+      clearInterval(bombId)
+      tankHealth -= 10
+    }
+    checkEnd()
   }
 }
 
