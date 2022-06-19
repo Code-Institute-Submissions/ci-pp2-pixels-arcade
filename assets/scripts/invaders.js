@@ -263,6 +263,28 @@ function checkEnd() {
     }
 }
 
+// startGame function 
+function startGame() {
+  startButton.removeEventListener("click", startGame)
+  intervalTime = 500
+  invadersId = setInterval(moveInvaders, intervalTime)
+  points = 0
+  gameEnd = ""
+  
+  setTimeout(() => {
+    spawnBoss()
+  }, 6000)
+}
+
+// endGame function
+function endGame() {
+  clearInterval(bossId)
+  clearInterval(invadersId)
+  result.innerHTML = gameEnd
+  endScore.innerHTML = points
+  document.querySelector("#game-over").style.display="block"
+}
+
 squares[currentPosition].classList.add("tank")
 //Our event listeners
 document.addEventListener("keydown", shoot)
