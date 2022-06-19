@@ -1,0 +1,56 @@
+/* Styling for buttons */
+button {
+  background-color: #282828;
+  color: #25c40d;
+  font-size: 1rem;
+  width: 100px;
+  padding: 4px 0;
+  border-style: outset;
+  border-radius: 20px;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+
+/* Styling for overall board layout */
+#board {
+  max-width: 100%;
+  height: 70vh;
+  margin: 50px auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Styling for levels */
+#levels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-level {
+  font-weight: 700;
+  background-color: #575555;
+  border: none;
+}
+
+/* Styling for choices */
+#choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#computer-choice, #user-choice {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.selections {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
