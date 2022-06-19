@@ -153,6 +153,23 @@ function spawnBoss() {
   }
 }
 
+/**
+ * Function to move the tank across the bottom of the screen
+ * Can control the tank with arrows, a and d keys or the arrows on the screen
+ */
+ function moveTank(event) {
+  squares[currentPosition].classList.remove("tank")
+  if ((event.key === "ArrowLeft" || event.key === "a" || event.target.id === "left")
+      && currentPosition % width !== 0){
+    currentPosition -= 1
+  }
+  if ((event.key === "ArrowRight" || event.key === "d" || event.target.id === "right") 
+      && currentPosition % width < width - 1) {
+    currentPosition += 1
+  }
+  squares[currentPosition].classList.add("tank")
+} 
+
 
 squares[currentPosition].classList.add("tank")
 //Our event listeners
