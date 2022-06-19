@@ -39,6 +39,47 @@
   <!-- Main section containing the game menu-->
   <section id="main-screen">
 
+    <h1>Rock, Paper, Scissors</h1>
+    
+    <!-- HTML for game -->
+    <div id="board">
+      <!-- Buttons to select best of or reset board-->
+      <div id="levels">
+        <p>Number of rounds: </p>  
+        <button id="three-rounds">Three</button>
+        <button id="five-rounds">Five</button>
+        <button id="reset">Reset</button>
+      </div>
+    
+      <!-- Display best of selected, default to three-->
+      <h2>Best of <span id="round-text">Three</span>!</h2>
+      
+      <!-- Display the computer and user choices next to each other-->
+      <div id="choices">
+        <div>
+          <h2>Computer Choice: </h2>
+          <img id="computer-choice" src="assets/images/rps/rps.webp">
+          <p>Computer Score: <span id="computer-score">0</span></p>
+        </div>
+        <div>
+          <h2>Your Choice:</h2>
+          <img id="user-choice" src="assets/images/rps/rps.webp">
+          <p>Your Score: <span id="user-score">0</span></p>
+        </div>
+      </div>
+
+      <!-- To display the results of each round-->
+      <p>Round <span id="round">1</span>: <span id="result"></span></p>
+
+      <!-- Options for the user to select -->
+      <h2>Select one:</h2>
+      <div id="options">
+        <img id="rock" class="selections" src="assets/images/rps/rock.webp" alt="rock image">
+        <img id="paper" class="selections" src="assets/images/rps/paper.webp" alt="paper image">
+        <img id="scissors" class="selections" src="assets/images/rps/scissors.webp" alt="scissors image">
+      </div>
+
+    </div>
   </section>
 
   <!-- Footer with social links -->
