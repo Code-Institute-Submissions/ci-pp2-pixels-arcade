@@ -22,6 +22,23 @@ let computerPoints = 0
 let round = 0
 let numberOfRounds = 3
 
+// Our functions to select our levels
+function playThree() {
+  threeRounds.removeEventListener("click", playThree)
+  fiveRounds.removeEventListener("click", playFive)
+  threeRounds.classList.add("current-level")
+  numberOfRounds = 3
+  roundText.innerHTML = "Three"
+}
+
+function playFive() {
+  threeRounds.removeEventListener("click", playThree)
+  fiveRounds.removeEventListener("click", playFive)
+  fiveRounds.classList.add("current-level")
+  numberOfRounds = 5
+  roundText.innerHTML = "Five"
+}
+
 // Our EventListeners
 threeRounds.addEventListener("click", playThree)
 fiveRounds.addEventListener("click", playFive)
