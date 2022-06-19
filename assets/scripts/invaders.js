@@ -40,6 +40,29 @@ for (let i = 0; i < 240; i++) {
 
 const squares = Array.from(document.querySelectorAll("#board div"))
 
+// Our invaders array
+const invaders = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+  15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+  30, 31, 32, 33, 34, 35, 36, 37, 38, 39
+]
+
+// Function to add invaders to the board
+function draw() {
+  for (let i = 0; i < invaders.length; i++) {
+      if (!invadersRemoved.includes(i)){
+          squares[invaders[i]].classList.add("invader")
+      }
+  }
+}
+
+// Function to remove invaders from the board
+function remove() {
+  for (let i = 0; i < invaders.length; i++) {
+      squares[invaders[i]].classList.remove("invader")
+  }
+}
+
 squares[currentPosition].classList.add("tank")
 //Our event listeners
 document.addEventListener("keydown", shoot)
