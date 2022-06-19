@@ -174,6 +174,38 @@ function createCards() {
   checkForMatch()
 }
 
+// We compare the cards by their name and either disable the cards(they're a match!) or unflip them
+function checkForMatch() {
+  let isMatch = firstCard.dataset.name === secondCard.dataset.name
+
+  isMatch ? disableCards() : unflipCards()
+}
+
+// Our disableCard function once we have a pair
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard)
+  secondCard.removeEventListener("click", flipCard)
+  matchedCards++
+  matches.innerHTML = matchedCards
+  resetBoard()
+}
+
+// Our unflipCards function that removes the flip class
+function unflipCards() {
+  lockBoard = true
+  setTimeout(() => {
+      firstCard.classList.remove("flip")
+      secondCard.classList.remove("flip")  
+      resetBoard()  
+      }, 1000)
+}
+
+// Our reset board function to call after we've unflipped our cards
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false]
+  [firstCard, secondCard] = [null, null]
+}
+
 // Our EventListeners for our buttons in our HTML
 levelEasy.addEventListener("click", levelOne)
 levelMedium.addEventListener("click", levelTwo)
