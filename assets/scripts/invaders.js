@@ -238,6 +238,30 @@ function shoot(event) {
   }
 }
 
+// Conditions to trigger the endGame function
+function checkEnd() {
+  if (squares[currentPosition].classList.contains("invader","tank")) {
+        gameEnd = "DIED"
+        endGame()
+    }
+    
+  for (let i = 0; i < invaders.length; i++) {
+    if ((invaders[i]) > squares.length - 15) {
+      gameEnd = "DIED"
+      endGame()
+    }
+  }
+
+  if (tankHealth <= 0) {
+    gameEnd = "DIED"
+    endGame()
+  }
+      
+  if (invadersDead && bossDied) {
+      gameEnd = "WIN"
+      endGame()
+    }
+}
 
 squares[currentPosition].classList.add("tank")
 //Our event listeners
