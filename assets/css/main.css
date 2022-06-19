@@ -71,6 +71,7 @@ nav li {
   border-radius: 60px;
   background-color: var(--apple-white);
   text-align: center;
+  margin-top: 10px;
 }
 
 h1 {
@@ -142,4 +143,78 @@ footer a {
   color: var(--apple-light-green);
   padding: 0 1.5rem;
   line-height: 4rem;
+}
+
+@media (min-width: 2250px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 840px) {
+  #header-title {
+    font-size: 1.5rem;
+  }
+  #header-title img {
+    width: 2em;
+    height: 2em;
+  }
+  nav {
+    font-size: 0.75rem;
+  }
+  footer {
+    height: 2rem;
+  }
+  footer a {
+    font-size: 0.5rem;
+    padding: 0 0.25em;
+    line-height: 2rem;
+  }
+}
+
+@media (max-height: 860px) {
+  #end {
+    font-size: 0.75em;
+  }
+  #end p {
+    margin: 5px;
+  }
+  #end a {
+    padding: 0.5em;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 605px) {
+  #header-title {
+    font-size: 1rem;
+    height: 50%;
+  }
+  #header-title img {
+    width: 1.75em;
+    height: 1.75em;
+  }
+  nav {
+    font-size: 0.5rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  #game-over {
+    width: 80vw;
+  }
+  #main-screen {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
+@media (max-width: 310px) {
+  #header-title img {
+    width: 1em;
+    height: 1em;
+  }
+  #header-title {
+    font-size: 0.75rem;
+  }
 }
