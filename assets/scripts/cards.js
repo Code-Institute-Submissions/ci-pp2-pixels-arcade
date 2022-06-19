@@ -77,6 +77,18 @@ const cardsArray = [
   },
 ]
 
+// Our global variables
+let gameLevel = "easy"
+let gameOver = false
+let time = 0
+let flips = 0
+let matchedCards = 0
+let hasFlippedCard = false
+let lockBoard = true
+let firstCard
+let secondCard
+let gameCards = []
+
 // Our EventListeners for our buttons in our HTML
 levelEasy.addEventListener("click", levelOne)
 levelMedium.addEventListener("click", levelTwo)
