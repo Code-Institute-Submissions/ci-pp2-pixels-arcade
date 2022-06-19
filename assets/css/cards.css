@@ -1,0 +1,91 @@
+/* Styling for buttons */
+button {
+  background-color: #282828;
+  color: #25c40d;
+  font-size: 1rem;
+  width: 120px;
+  padding: 0.25em 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Styling for level select and stats */
+#levels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px 75px;
+  line-height: 32px;
+}
+
+#stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* Styling board */
+.board {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Grid styling */
+.grid {
+  max-width: 900px;
+  max-height: 640px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* Styling for the cards */
+.card {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 15px auto;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+  background-color: #282828;
+  box-shadow: 5px 0 5px;
+}
+
+.card:active {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card.flip {
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+.front-face,
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: center / contain no-repeat;
+}
+
+.front-face {
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg) translateZ(1px);
+  background-color: transparent;
+}
