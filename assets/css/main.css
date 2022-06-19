@@ -79,6 +79,18 @@ h1 {
   margin: 1em auto 0;
 }
 
+/* Button styling */
+button {
+  background-color: var(--apple-black);
+  color: var(--apple-light-green);
+  font-size: 1rem;
+  padding: 4px 12px;
+  border-style: outset;
+  border-radius: 20px;
+  margin: 5px 20px;
+  cursor: pointer;
+}
+
 /* Styling for game over */
 #game-over {
   background-color: var(--apple-black);
