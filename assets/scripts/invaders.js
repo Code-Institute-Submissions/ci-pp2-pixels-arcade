@@ -100,6 +100,30 @@ function moveInvaders() {
   checkEnd()
 }
 
+// Function to spawn the boss ship and move it back and forth
+function spawnBoss() {
+  bossId = setInterval(moveBoss, intervalTime)
+  bombInterval = setInterval(dropBomb, 1500)
+  
+  function moveBoss() {
+    squares[bossPosition].classList.remove("boss")
+    bossPosition += bossDirection
+    squares[bossPosition].classList.add("boss")
+    bombInterval
+
+    if (bossPosition === 29 && bossGoingRight) {
+    bossDirection = - 1
+    bossGoingRight = false
+    }
+    
+    if (bossPosition === 15 && !bossGoingRight) {
+    bossDirection  = + 1
+    bossGoingRight = true
+    }
+   
+  }
+}
+
 
 squares[currentPosition].classList.add("tank")
 //Our event listeners
