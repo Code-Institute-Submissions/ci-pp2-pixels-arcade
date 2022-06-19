@@ -10,6 +10,28 @@ const left = document.getElementById("left")
 const right = document.getElementById("right")
 const wrap = document.getElementById("wrap")
 
+// Our global variables
+let currentPosition = 217
+let width = 15
+let direction = 1
+let goingRight = true
+let invadersRemoved = []
+let points = 0
+let gameEnd = ""
+let invadersId = 0
+let intervalTime = 0
+let noWrap = true
+
+let tankHealth = 30
+let bossHealth = 30
+let bossId = 0
+let bossPosition = 14
+let bossGoingRight = true
+let bossDirection = 1
+let bossDied = false
+let invadersDead = false
+let bombInterval
+
 
 
 squares[currentPosition].classList.add("tank")
