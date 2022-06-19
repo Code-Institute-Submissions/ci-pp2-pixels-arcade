@@ -63,6 +63,44 @@ function remove() {
   }
 }
 
+// Move the invaders back and forth across the screen
+function moveInvaders() {
+  const leftEdge = invaders[0] % width === 0
+  const rightEdge = invaders[invaders.length - 1] % width === width - 1
+  remove()
+
+  // Bounces the invaders off the edges of the screen. If noWrap === false invaders can wrap instead
+  if (rightEdge && goingRight && noWrap === true) {
+      for (let i = 0; i < invaders.length; i++) {
+          invaders[i] += width + 1
+          direction = - 1
+          goingRight = false
+      }
+  }
+
+  if (leftEdge && !goingRight && noWrap === true) {
+      for (let i = 0; i < invaders.length; i++) {
+          invaders[i] += width - 1
+          direction = 1
+          goingRight = true
+      }
+  }
+
+  for (let i = 0; i < invaders.length; i++) {
+      invaders[i] += direction
+  }
+  
+  draw() 
+  
+  if (invaders.length === invadersRemoved.length) {
+    invadersDead = true
+    clearInterval(invadersId)
+  }
+  
+  checkEnd()
+}
+
+
 squares[currentPosition].classList.add("tank")
 //Our event listeners
 document.addEventListener("keydown", shoot)
