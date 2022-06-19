@@ -146,6 +146,33 @@ function createCards() {
   })
 }
 
+/**
+ * The flipCard function (called on click from the EventListener added above in our
+ * createCards function) handles what happens when we click on a card
+ * We can't flip again once it's selected
+ * We can only flip two cards at a time
+ * It increments our attempts (increments after the second flip)
+ * Then we check for a match 
+ */
+ function flipCard() {
+  if (lockBoard) return
+  if (this === firstCard) return
+
+  this.classList.toggle("flip")
+
+  if (!hasFlippedCard) {
+      // First click
+      hasFlippedCard = true
+      firstCard = this
+      return
+  }
+  // Second click
+  secondCard = this
+  flips++
+  attempts.innerHTML = flips
+
+  checkForMatch()
+}
 
 // Our EventListeners for our buttons in our HTML
 levelEasy.addEventListener("click", levelOne)
