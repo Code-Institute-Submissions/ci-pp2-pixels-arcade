@@ -39,7 +39,7 @@ li {
 
 /* Header and navbar styling */
 header {
-  height: 10vh;
+  height: 15vh;
   width: min(1200px, 90vw);
   
 }
@@ -56,12 +56,12 @@ header {
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 nav li {
-  padding: 5px;
+  padding: 4px;
   border: 4px solid var(--apple-dark-green);
 }
 
@@ -76,7 +76,7 @@ nav li {
 
 h1 {
   font-size: 2rem;
-  margin: 1em auto;
+  margin: 1em auto 0;
 }
 
 /* Styling for game over */
