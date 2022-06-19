@@ -89,6 +89,64 @@ let firstCard
 let secondCard
 let gameCards = []
 
+// Starting to construct the board
+const board = document.getElementById("board")
+const grid = document.createElement("div")
+grid.setAttribute("class", "grid")
+board.appendChild(grid)
+
+/**
+ * Function to select a number of random cards from our earlier array
+ * First locally declare a temporary array
+ * Then shuffle our cardsArray
+ * Depending which level we've selected on our main screen, we'll slice
+ * from our shuffled cards
+ * Then use concatenation and save to our earlier globally declared gameCards array,
+ * so we have pairs
+ */
+function numberOfCards () {
+  let selectedCards = []
+  let randomCards = cardsArray.sort(() => 0.5 - Math.random())
+  if (gameLevel === "easy") {
+    selectedCards = randomCards.slice(0, 6)
+  } else if (gameLevel === "medium") {
+    selectedCards = randomCards.slice(0, 8)
+  } else if (gameLevel === "hard") {
+    selectedCards = randomCards.slice(0, 10)
+  } 
+  gameCards = selectedCards.concat(selectedCards)
+}
+
+/**
+ * The function to create the cards
+ * First sort the gameCards array to properly mix the cards
+ * Then create divs and add the classes card, front-face and back-face,
+ * so we can add our EventListener, and style the cards so they can be flipped
+ * And append everything together
+ */
+function createCards() {
+  gameCards.sort(() => 0.5 - Math.random())
+  gameCards.forEach((item) => {
+    const card = document.createElement("div")
+    card.classList.add("card")
+    card.dataset.name = item.name
+    card.addEventListener("click", flipCard)
+
+    const frontFace = document.createElement('div');
+    frontFace.classList.add('front-face');
+    frontFace.style.backgroundImage = `url(${item.img})`;
+
+    const backFace = document.createElement('div');
+    backFace.classList.add('back-face');
+    
+    
+    grid.appendChild(card);
+    card.appendChild(frontFace);
+    card.appendChild(backFace);
+  })
+}
+
+
 // Our EventListeners for our buttons in our HTML
 levelEasy.addEventListener("click", levelOne)
 levelMedium.addEventListener("click", levelTwo)
