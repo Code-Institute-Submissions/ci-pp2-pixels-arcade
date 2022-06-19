@@ -35,3 +35,25 @@
   background-color: var(--apple-black);
   border-radius: 20px;
 }
+
+@media (max-width: 840px) {
+  .game-selection {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .game-selection {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.75rem;
+  }
+}
