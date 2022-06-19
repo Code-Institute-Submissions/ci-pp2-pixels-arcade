@@ -47,12 +47,12 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 520px),
+(max-height: 520px) {
   .game-selection {
     width: 100px;
     height: 100px;
   }
-
   .title {
     font-size: 0.75rem;
   }
