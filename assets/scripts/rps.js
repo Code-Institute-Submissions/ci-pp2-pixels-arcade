@@ -85,6 +85,54 @@ function computerChoice() {
   }
 }
 
+/**
+ * Our compare function compares the picks, increment points and update
+ * our round results
+ * It also increments the rounds, displays results and calls endGame to check for a winner
+ */
+ function compare() {
+  if (computerPick === "rock" && userPick === "paper") {
+    userPoints++
+    result = "You win"
+  } else if (computerPick === "paper" && userPick === "scissors") {
+    userPoints++
+    result = "You win"
+  } else if (computerPick === "scissors" && userPick === "rock") {
+    userPoints++
+    result = "You win"
+  } else if (computerPick === userPick) {
+    result = "It's a draw"
+  } else {
+    computerPoints++
+    result = "You lose"
+  }
+
+  endGame()
+  round++
+  roundCount.innerHTML = round
+  roundResult.innerHTML = result
+  computerScore.innerHTML = computerPoints
+  userScore.innerHTML = userPoints
+}
+
+/**
+ * Our endGame function compares the user and computer's point tallies to the number of
+ * rounds to determine the winner, but returns out of itself if no one has met the
+ * requirement
+ * numberOfRounds can be set by our earlier level functions
+ */
+function endGame() {
+  if (computerPoints === numberOfRounds) {
+    endScore.innerHTML = "YOU LOST"
+    gameOver.style.display="block"
+  } else if (userPoints === numberOfRounds) {
+    endScore.innerHTML = "YOU WON"
+    gameOver.style.display="block"
+  } else {
+    return
+  }
+}
+
 // Our EventListeners
 threeRounds.addEventListener("click", playThree)
 fiveRounds.addEventListener("click", playFive)
