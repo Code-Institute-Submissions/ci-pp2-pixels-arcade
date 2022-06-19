@@ -161,10 +161,10 @@ function createCards() {
   this.classList.toggle("flip")
 
   if (!hasFlippedCard) {
-      // First click
-      hasFlippedCard = true
-      firstCard = this
-      return
+    // First click
+    hasFlippedCard = true
+    firstCard = this
+    return
   }
   // Second click
   secondCard = this
@@ -194,16 +194,95 @@ function disableCards() {
 function unflipCards() {
   lockBoard = true
   setTimeout(() => {
-      firstCard.classList.remove("flip")
-      secondCard.classList.remove("flip")  
-      resetBoard()  
-      }, 1000)
+    firstCard.classList.remove("flip")
+    secondCard.classList.remove("flip")  
+    resetBoard()  
+    }, 1000)
 }
 
 // Our reset board function to call after we've unflipped our cards
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false]
   [firstCard, secondCard] = [null, null]
+}
+
+/**
+ * Our level functions
+ * Called by our buttons, set the game level which changes number of cards
+ * And also adjusts our grid in CSS to fit our cards
+ * Then starts the game
+ */
+ function levelOne() {
+  gameLevel = "easy"
+  grid.style.gridTemplateColumns = "auto auto auto auto"
+  startGame()
+}
+
+function levelTwo() {
+  gameLevel = "medium"
+  grid.style.gridTemplateRows = "auto auto auto auto"
+  startGame()
+}
+
+function levelThree() {
+  gameLevel = "hard"
+  grid.style.gridTemplateRows = "auto auto auto auto auto"
+  startGame()
+}
+
+/**
+ * Our checkWin function calls our win function if our conditions are met
+ * depending on the level
+ * Called in the setInterval function in our startGame function. But may also
+ * work in our checkForMatch function
+ */
+function checkWin() {
+  if (gameLevel === "easy" && matchedCards === 6) {
+    win()
+  } else if (gameLevel === "medium" && matchedCards === 8) {
+    win()
+  } else if (gameLevel === "hard" && matchedCards === 10) {
+    win()
+  } else {
+    return
+  }
+}
+
+// Our win function sets gameOver to true and displays our game over screen
+function win() {
+  gameOver = true
+  lockBoard = true
+  document.querySelector("#game-over").style.display="block"
+  endScore.innerHTML = matchedCards
+  endTime.innerHTML = time
+}
+
+/**
+ * startGame function
+ * Removes EventListeners to prevent user creating too many cards
+ * (although, could be interesting to include a feature where users can generate
+ * as many cards as they want)
+ * Calls our numberOfCards and createCards functions to generate the board
+ * Starts a setInterval function that increments our timer, checks for wins and
+ * clears itselve if gameOver is true
+ */
+function startGame() {
+  levelEasy.removeEventListener("click", levelOne)
+  levelMedium.removeEventListener("click", levelTwo)
+  levelHard.removeEventListener("click", levelThree)
+  lockBoard = false
+  numberOfCards()
+  createCards()
+  
+  let startTime = setInterval(() => {
+    time++
+    timer.innerHTML = time
+    checkWin()
+    if (gameOver) {
+      time = 0
+      clearInterval(startTime)
+    }
+  }, 1000)
 }
 
 // Our EventListeners for our buttons in our HTML
