@@ -32,7 +32,13 @@ let bossDied = false
 let invadersDead = false
 let bombInterval
 
+// Our for loop creating our board
+for (let i = 0; i < 240; i++) {
+  const square = document.createElement("div")
+  board.appendChild(square)
+}
 
+const squares = Array.from(document.querySelectorAll("#board div"))
 
 squares[currentPosition].classList.add("tank")
 //Our event listeners
