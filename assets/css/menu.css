@@ -10,8 +10,8 @@
 }
 
 .game-selection {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: auto auto;
 }
 
@@ -20,6 +20,10 @@
   height: 100%;
   margin-bottom: 8px;
   object-fit: contain;
+}
+
+.title {
+  font-size: 1.5rem;
 }
 
 .background-card {
