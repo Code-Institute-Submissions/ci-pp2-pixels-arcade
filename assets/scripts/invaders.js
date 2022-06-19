@@ -100,6 +100,19 @@ function moveInvaders() {
   checkEnd()
 }
 
+// Function to change wrap for invaders
+function changeWrap() {
+  if (noWrap === true) {
+    noWrap = false
+    wrap.innerHTML = "ON"
+    return
+  } else if (noWrap === false) {
+    noWrap = true
+    wrap.innerHTML = "OFF"
+  }
+  return 
+}
+
 // Function to spawn the boss ship and move it back and forth
 function spawnBoss() {
   bossId = setInterval(moveBoss, intervalTime)
@@ -263,6 +276,15 @@ function checkEnd() {
     }
 }
 
+// endGame function
+function endGame() {
+  clearInterval(bossId)
+  clearInterval(invadersId)
+  result.innerHTML = gameEnd
+  endScore.innerHTML = points
+  document.querySelector("#game-over").style.display="block"
+}
+
 // startGame function 
 function startGame() {
   startButton.removeEventListener("click", startGame)
@@ -274,15 +296,6 @@ function startGame() {
   setTimeout(() => {
     spawnBoss()
   }, 6000)
-}
-
-// endGame function
-function endGame() {
-  clearInterval(bossId)
-  clearInterval(invadersId)
-  result.innerHTML = gameEnd
-  endScore.innerHTML = points
-  document.querySelector("#game-over").style.display="block"
 }
 
 squares[currentPosition].classList.add("tank")
