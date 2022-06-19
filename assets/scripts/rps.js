@@ -39,6 +39,52 @@ function playFive() {
   roundText.innerHTML = "Five"
 }
 
+/**
+ * We use the forEach method set the userPick variable from the ID of the image they selected
+ * And then call userChoice to display an image, and call computerChoice and compare
+ */
+ choices.forEach(choice => choice.addEventListener("click", (event) => {
+  userPick = event.target.id
+  userChoice()
+  computerChoice()
+  compare()
+}))
+
+function userChoice() {
+  if (userPick === "rock") {
+    user.src = "assets/images/rps/rock-right.webp"
+  }
+  if (userPick === "paper") {
+    user.src = "assets/images/rps/paper-right.webp"
+  }
+  if (userPick === "scissors") {
+    user.src = "assets/images/rps/scissors-right.webp"
+  }
+}
+
+/**
+ * The computerChoice function randomly picks a number and then assigns the computerPick
+ * and displays it's choice
+ * We could hardcode 3 for choices.length as we're only deciding between 3 options, but
+ * if we decide to add an option for the user to select between classic RPS and Rock, Paper,
+ * Scissors, Lizard, Spock or another varient, using a global variable makes it more dynamic
+ */
+function computerChoice() {
+  const randomChoice = Math.floor(Math.random() * choices.length)
+  if (randomChoice === 0) {
+    computerPick = "rock"
+    computer.src = "assets/images/rps/rock-left.webp"
+  }
+  if (randomChoice === 1) {
+    computerPick = "paper"
+    computer.src = "assets/images/rps/paper-left.webp"
+  }
+  if (randomChoice === 2) {
+    computerPick = "scissors"
+    computer.src = "assets/images/rps/scissors-left.webp"
+  }
+}
+
 // Our EventListeners
 threeRounds.addEventListener("click", playThree)
 fiveRounds.addEventListener("click", playFive)
