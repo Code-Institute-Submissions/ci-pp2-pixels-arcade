@@ -149,7 +149,7 @@ function spawnBoss() {
     bombPosition += width
     squares[bombPosition].classList.add("bomb")
 
-    if (bombPosition > (squares.length - 15)) {
+    if (bombPosition > (squares.length - 16)) {
       squares[bombPosition].classList.remove("bomb")
       clearInterval(bombId)
       return
