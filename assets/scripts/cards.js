@@ -9,7 +9,73 @@ let attempts = document.getElementById("flips")
 let endScore = document.getElementById("end-score")
 let endTime = document.getElementById("end-time")
 
-
+// Our card array for the cards we'll generate
+const cardsArray = [
+  {
+    name: "cat",
+    img: "assets/images/cards/cat.webp",
+  },
+  {
+    name: "cow",
+    img: "assets/images/cards/cow.webp",
+  },
+  {
+    name: "gorilla",
+    img: "assets/images/cards/gorilla.webp",
+  },
+  {
+    name: "elephant",
+    img: "assets/images/cards/elephant.webp",
+  },
+  {
+    name: "hippo",
+    img: "assets/images/cards/hippo.webp",
+  },
+  {
+    name: "lion",
+    img: "assets/images/cards/lion.webp",
+  },
+  {
+    name: "parrot",
+    img: "assets/images/cards/parrot.webp",
+  },
+  {
+    name: "bat",
+    img: "assets/images/cards/bat.webp",
+  },
+  {
+    name: "chameleon",
+    img: "assets/images/cards/chameleon.webp",
+  },
+  {
+    name: "deer",
+    img: "assets/images/cards/deer.webp",
+  },
+  {
+    name: "frog",
+    img: "assets/images/cards/frog.webp",
+  },
+  {
+    name: "ram",
+    img: "assets/images/cards/ram.webp",
+  },
+  {
+    name: "raven",
+    img: "assets/images/cards/raven.webp",
+  },
+  {
+    name: "sabre",
+    img: "assets/images/cards/sabre.webp",
+  },
+  {
+    name: "turtle",
+    img: "assets/images/cards/turtle.webp",
+  },
+  {
+    name: "walrus",
+    img: "assets/images/cards/walrus.webp",
+  },
+]
 
 // Our EventListeners for our buttons in our HTML
 levelEasy.addEventListener("click", levelOne)
