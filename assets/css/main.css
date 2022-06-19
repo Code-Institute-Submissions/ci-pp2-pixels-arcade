@@ -1,0 +1,66 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* Custom variables */
+:root {
+  --apple-white: #EEF1DB;
+  --apple-dark-green: #04650D;
+  --apple-light-green: #25C40D;
+  --apple-black: #282828;
+}
+
+/* Reset default browser settings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Main styling for all pages */
+body {
+  background-color: var(--apple-black);
+  font-family: "Press Start 2P", sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--apple-light-green);
+}
+
+li {
+  list-style: none;
+}
+
+/* Header and navbar styling */
+header {
+  height: 10vh;
+  width: min(1200px, 90vw);
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Footer styling */
+footer {
+  height: 3rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-socials > li {
+  display: inline;
+}
+
+footer a {
+  color: var(--apple-light-green);
+  padding: 0 1.5rem;
+  line-height: 4rem;
+}
