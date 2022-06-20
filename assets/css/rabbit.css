@@ -75,3 +75,28 @@
 .hole.up .rabbit {
   top: 0;
 }
+
+@media (max-width: 580px) {
+  button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  #scoreboard {
+    padding-right: 18px;
+  }
+  #timer {
+    padding-left: 18px;
+  }
+  #board {
+    margin: 10px auto;
+  }
+  .hole::after {
+    bottom: -30px;
+  }
+}
+
+@media (max-height: 1000px) {
+  h2 {
+    font-size: 1em;
+  }
+}
