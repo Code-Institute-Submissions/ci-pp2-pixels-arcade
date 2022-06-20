@@ -46,3 +46,44 @@
   height: 150px;
   cursor: pointer;
 }
+
+@media (max-height: 860px),
+(max-width: 900px) {
+  #board {
+    margin: 0 auto;
+  }
+  .selections {
+    width: 100px;
+    height: 100px;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 650px) {
+  button {
+    padding: 4px;
+  }
+  #computer-choice,
+  #user-choice {
+    width: 75px;
+    height: 75px;
+  }
+  .selections {
+    width: 75px;
+    height: 75px;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h1 {
+    margin: 10px 25px;
+  }
+  button {
+    margin: 5px
+  }
+  p {
+    font-size: 0.75em;
+  }
+}
