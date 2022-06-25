@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 45% 45%;
   grid-template-rows: auto;
-  grid-gap: 10%;
+  grid-gap: 20% 10%;
 }
 
 .game-selection {
@@ -36,10 +36,12 @@
   border-radius: 20px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 840px),
+(max-height: 810px) {
   .game-selection {
     width: 150px;
     height: 150px;
+    margin-bottom: 10px;
   }
 
   .title {
@@ -48,7 +50,7 @@
 }
 
 @media (max-width: 520px),
-(max-height: 520px) {
+(max-height: 630px) {
   .game-selection {
     width: 100px;
     height: 100px;
