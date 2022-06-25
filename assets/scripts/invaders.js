@@ -9,6 +9,7 @@ const fire = document.getElementById("fire")
 const left = document.getElementById("left")
 const right = document.getElementById("right")
 const wrap = document.getElementById("wrap")
+const tankLives = document.getElementById("tank-lives")
 
 // Our global variables
 let currentPosition = 217
@@ -161,6 +162,7 @@ function spawnBoss() {
       setTimeout(() => squares[bombPosition].classList.remove("boom"), 200)
       clearInterval(bombId)
       tankHealth -= 1
+      tankLives.innerHTML = tankHealth
     }
     checkEnd()
   }
