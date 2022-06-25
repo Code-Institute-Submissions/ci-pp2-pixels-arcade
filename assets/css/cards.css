@@ -19,15 +19,6 @@
   margin: 10px 0;
 }
 
-/* Styling board */
-.board {
-  width: 900px;
-  display: flex;
-  flex-direction: column;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}
-
 /* Grid styling */
 .grid {
   max-width: 900px;
