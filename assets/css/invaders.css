@@ -4,6 +4,13 @@
   --apple-black: #282828;
 }
 
+/* Styling stats display */
+#stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 /* Styling for game board */
 #board {
   width: 308px;
