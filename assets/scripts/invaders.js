@@ -22,8 +22,8 @@ let invadersId = 0
 let intervalTime = 0
 let noWrap = true
 
-let tankHealth = 30
-let bossHealth = 30
+let tankHealth = 3
+let bossHealth = 3
 let bossId = 0
 let bossPosition = 14
 let bossGoingRight = true
@@ -160,7 +160,7 @@ function spawnBoss() {
       squares[bombPosition].classList.add("boom")
       setTimeout(() => squares[bombPosition].classList.remove("boom"), 200)
       clearInterval(bombId)
-      tankHealth -= 10
+      tankHealth -= 1
     }
     checkEnd()
   }
@@ -217,14 +217,14 @@ function shoot(event) {
       checkEnd()
     }
 
-    if (squares[missilePosition].classList.contains("boss") && bossHealth > 10) {
+    if (squares[missilePosition].classList.contains("boss") && bossHealth > 1) {
       squares[missilePosition].classList.remove("missile")
       squares[missilePosition].classList.add("boom")
-      bossHealth -= 10
+      bossHealth -= 1
       setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
       clearInterval(missileId)
       
-      } else if (squares[missilePosition].classList.contains("boss") && bossHealth <= 10) {
+      } else if (squares[missilePosition].classList.contains("boss") && bossHealth <= 1) {
       squares[missilePosition].classList.remove("missile")
       squares[missilePosition].classList.remove("boss")
       squares[missilePosition].classList.add("boom")
