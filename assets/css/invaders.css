@@ -80,3 +80,36 @@
   color: var(--apple-light-green);
   font-weight: 700;
 }
+
+@media (min-width: 2000px),
+(min-height: 800px) {
+  #board {
+    width: 608px;
+    height: 608px;
+  }
+  #board div {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  button {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 400px),
+(max-height: 600px) {
+  button {
+    margin: 5px;
+  }
+  #board {
+    width: 233px;
+    height: 233px;
+  }
+  #board div {
+    width: 15px;
+    height: 15px;
+  }
+}
