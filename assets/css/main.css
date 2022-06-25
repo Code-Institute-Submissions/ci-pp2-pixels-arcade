@@ -66,7 +66,7 @@ nav li {
 /* Styling for main screen section */
 #main-screen {
   width: min(80vw, 100%);
-  height: min(80vh, 100%);
+  min-height: 80vh;
   border-radius: 60px;
   background-color: var(--apple-white);
   text-align: center;
