@@ -88,8 +88,7 @@
   font-weight: 700;
 }
 
-@media (min-width: 2000px),
-(min-height: 800px) {
+@media (min-width: 1400px) {
   #board {
     width: 608px;
     height: 608px;
