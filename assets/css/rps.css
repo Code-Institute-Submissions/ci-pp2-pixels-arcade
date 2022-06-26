@@ -47,6 +47,12 @@
   cursor: pointer;
 }
 
+@media (min-width: 1200px) and (min-height: 1200px) {
+  html {
+    font-size: 150%;
+  }
+}
+
 @media (max-height: 860px),
 (max-width: 900px) {
   #board {
@@ -83,7 +89,7 @@
   button {
     margin: 5px
   }
-  p {
+  p, #levels > h2 {
     font-size: 0.75em;
   }
 }
