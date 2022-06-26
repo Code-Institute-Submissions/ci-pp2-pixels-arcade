@@ -5,19 +5,20 @@
 
 /* Styling for menu section of index.html */
 #game-list {
-  height: 80%;
+  height: 60vh;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   display: grid;
-  grid-template-columns: 45% 45%;
-  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   grid-gap: 20% 10%;
+  
 }
 
 .game-selection {
   width: 200px;
   height: 200px;
-  margin: auto auto;
+  margin: 15px auto;
 }
 
 .game-selection img {
