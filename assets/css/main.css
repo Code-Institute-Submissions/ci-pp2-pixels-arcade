@@ -87,10 +87,16 @@ button {
   color: var(--apple-light-green);
   font-size: 1rem;
   padding: 4px 12px;
-  border-style: outset;
+  border-style: none;
   border-radius: 20px;
   margin: 5px 20px;
   cursor: pointer;
+  transition: 0.6s;
+}
+
+button:hover {
+  background-color: var(--apple-dark-green);
+  color: var(--apple-white);
 }
 
 /* Styling for game over */
