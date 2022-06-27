@@ -41,6 +41,7 @@
   <section id="main-screen">
 
     <h1>Dead Heads Memory Game</h1>
+    <p id="instructions">Instructions</p>
 
     <div id="details">
       <!-- Button elements to select levels and reset game -->      
@@ -62,6 +63,17 @@
     </div>
     <!-- Div for the board -->
     <div id="board"></div>
+
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Dead Heads</h2>
+        <p>Select your difficulty level to generate a board with 6, 8 or 10 pairs of cards.</p>
+        <p>Match the pairs as fast as you can.</p>
+        <p>You can reset the board at any time.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
 
     <!--Game Over-->
     <div id="game-over">
