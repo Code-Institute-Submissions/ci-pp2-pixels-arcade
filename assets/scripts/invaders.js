@@ -174,12 +174,10 @@ function spawnBoss() {
  */
  function moveTank(event) {
   squares[currentPosition].classList.remove("tank")
-  if ((event.key === "ArrowLeft" || event.key === "a" || event.target.id === "left")
-      && currentPosition % width !== 0){
+  if ((event.key === "ArrowLeft" || event.key === "a" || event.target.id === "left") && currentPosition % width !== 0){
     currentPosition -= 1
   }
-  if ((event.key === "ArrowRight" || event.key === "d" || event.target.id === "right") 
-      && currentPosition % width < width - 1) {
+  if ((event.key === "ArrowRight" || event.key === "d" || event.target.id === "right") && currentPosition % width < width - 1) {
     currentPosition += 1
   }
   squares[currentPosition].classList.add("tank")
