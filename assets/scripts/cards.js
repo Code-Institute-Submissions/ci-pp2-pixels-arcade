@@ -213,18 +213,21 @@ function resetBoard() {
  * Then starts the game
  */
  function levelOne() {
+  levelEasy.classList.add("selected")
   gameLevel = "easy"
   grid.style.gridTemplateColumns = "auto auto auto auto"
   startGame()
 }
 
 function levelTwo() {
+  levelMedium.classList.add("selected")
   gameLevel = "medium"
   grid.style.gridTemplateRows = "auto auto auto auto"
   startGame()
 }
 
 function levelThree() {
+  levelHard.classList.add("selected")
   gameLevel = "hard"
   grid.style.gridTemplateRows = "auto auto auto auto auto"
   startGame()
