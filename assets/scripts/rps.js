@@ -11,7 +11,6 @@ const gameOver = document.querySelector("#game-over")
 const choices = document.querySelectorAll(".selections")
 const threeRounds = document.getElementById("three-rounds")
 const fiveRounds = document.getElementById("five-rounds")
-const roundText = document.getElementById("round-text")
 
 // Our global variables
 let computerPick
@@ -24,19 +23,17 @@ let numberOfRounds = 3
 
 // Our functions to select our levels
 function playThree() {
+  threeRounds.classList.add("selected")
   threeRounds.removeEventListener("click", playThree)
   fiveRounds.removeEventListener("click", playFive)
-  threeRounds.classList.add("current-level")
   numberOfRounds = 3
-  roundText.innerHTML = "Three"
 }
 
 function playFive() {
+  fiveRounds.classList.add("selected")
   threeRounds.removeEventListener("click", playThree)
   fiveRounds.removeEventListener("click", playFive)
-  fiveRounds.classList.add("current-level")
   numberOfRounds = 5
-  roundText.innerHTML = "Five"
 }
 
 /**
