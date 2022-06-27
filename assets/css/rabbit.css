@@ -11,14 +11,17 @@
   justify-content: center;
 }
 
+#stats {
+  width: min(500px, 80vw);
+  margin: 15px auto;
+}
+
 #timer {
   float: left;
-  padding-left: 50px;
 }
 
 #scoreboard {
   float: right;
-  padding-right: 50px;
 }
 
 /* Styling for board */
