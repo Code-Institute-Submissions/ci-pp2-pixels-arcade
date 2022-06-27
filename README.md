@@ -174,3 +174,21 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/c
 - Press enter to create the clone.
 
 # Credits
+
+## Code
+
+- The code for Slap-a-Rabbit was adapted from:
+  - [Frank's Laboratory](https://www.youtube.com/watch?v=RTb8icFiSfk&ab_channel=Frankslaboratory)
+  - [Ania Kubow](https://www.youtube.com/watch?v=rJU3tHLgb_c&ab_channel=CodewithAniaKub%C3%B3w)
+- The code for Rock, Paper, Scissors was adapted from:
+  - [Web Dev Simplified](https://www.youtube.com/watch?v=1yS-JV4fWqY&ab_channel=WebDevSimplified)
+  - [Ania Kubow](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=1s&ab_channel=CodewithAniaKub%C3%B3w)
+- The code for Dead Heads Memory Game was adapted from:
+  - [Marina Ferriera](https://marina-ferreira.github.io/tutorials/js/memory-game/)
+  - [Tania Rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
+- The code for Space Invaders was adapted from:
+  - [Ania Kubow](https://www.youtube.com/watch?v=3Nz4Yp7Y_uA&ab_channel=CodewithAniaKub%C3%B3w)
+
+## Media
+
+- The images for Rock, Paper, Scissors are from this [free clipart image](https://www.clipartmax.com/middle/m2i8i8G6H7K9Z5H7_rock-paper-scissors-clipart-rock-paper-scissors-clip-art/)
