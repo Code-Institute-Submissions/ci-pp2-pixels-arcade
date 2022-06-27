@@ -70,6 +70,7 @@
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: bottom;
+  cursor: pointer;
 }
 
 .hole.up .rabbit {
