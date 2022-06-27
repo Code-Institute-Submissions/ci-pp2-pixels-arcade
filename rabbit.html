@@ -40,6 +40,7 @@
   <!-- Main section containing the game menu-->
   <section id="main-screen">
     <h1>Slap-a-Rabbit</h1>
+    <p id="instructions"> Instructions </p>
 
     <!-- Buttons for level select and reset game -->
     <button id="start-one">Level 1: Go!</button>
@@ -62,9 +63,20 @@
     <div id="board">
     </div>
 
+    <!-- Instruction pop up-->
+    <div id="intro" class="pop-up">
+      <div class="pop-up-card">
+        <h2>Welcome to Slap-a-Rabbit!</h2>
+        <p>Select your difficulty level.</p>
+        <p>Then you have 30 seconds to slap as many rabbits as you can.</p>
+        <p>You can reset the board at any time.</p>
+        <button id="close-pop-up">Got It!</button>
+      </div>
+    </div>
+
     <!-- Game screen div-->
-    <div id="game-over">
-      <div id="end">
+    <div id="game-over" class="pop-up">
+      <div id="end" class="pop-up-card">
         <h2>Game Over!</h2>
         <p>You slapped <span id="end-score">0</span> rabbits!</p>
         <a href="rabbit.html">Play Again</a>
