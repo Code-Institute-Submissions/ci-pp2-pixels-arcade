@@ -10,7 +10,27 @@ Currently available games include:
 
 The site is targeted towards users who are searching for quick, accessible games to pass the time on their PC or mobile phone.
 
+![Pixel's Arcade](readme-docs/amiresponsive.webp)
+
+The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/ci-pp2-pixels-arcade)
+
 # Table of Contents
+
+- [User Experience](https://github.com/SJECollins/ci-pp2-pixels-arcade#user-experience)
+- [Features](https://github.com/SJECollins/ci-pp2-pixels-arcade#features)
+  - [Universal](https://github.com/SJECollins/ci-pp2-pixels-arcade#universal)
+  - [Index Page](https://github.com/SJECollins/ci-pp2-pixels-arcade#index-page)
+  - [Slap-a-Rabbit](https://github.com/SJECollins/ci-pp2-pixels-arcade#slap-a-rabbit)
+  - [Rock, Paper, Scissors](https://github.com/SJECollins/ci-pp2-pixels-arcade#rock-paper-scissors)
+  - [Dead Heads Memory Game](https://github.com/SJECollins/ci-pp2-pixels-arcade#dead-heads-memory-game)
+  - [Space Invaders](https://github.com/SJECollins/ci-pp2-pixels-arcade#space-invaders)
+  - [Future Expansion](https://github.com/SJECollins/ci-pp2-pixels-arcade#future-expansion)
+- [Design](https://github.com/SJECollins/ci-pp2-pixels-arcade#design)
+- [Technologies Used](https://github.com/SJECollins/ci-pp2-pixels-arcade#technologies-used)
+- [Testing](https://github.com/SJECollins/ci-pp2-pixels-arcade#testing)
+- [Deployment](https://github.com/SJECollins/ci-pp2-pixels-arcade#deployment)
+- [Credits](https://github.com/SJECollins/ci-pp2-pixels-arcade#credits)
+
 
 # User Experience
 
@@ -39,6 +59,8 @@ The index page acts as a simple menu for the games available on the website. It 
 ## Dead Heads Memory Game
 
 ## Space Invaders
+
+## Future Expansion
 
 # Design
 
