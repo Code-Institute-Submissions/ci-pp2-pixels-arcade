@@ -106,6 +106,7 @@ button:hover {
 
 .selected {
   text-decoration: underline;
+  font-weight: 600;
 }
 
 /* Styling for game over */
