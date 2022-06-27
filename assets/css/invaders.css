@@ -67,7 +67,7 @@
 }
 
 #directions button {
-  background-color: none;
+  /* background-color: transparent; */
   border-style: none;
   height: 80px;
   width: 80px;
