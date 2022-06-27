@@ -104,6 +104,10 @@ button:hover {
   color: var(--apple-white);
 }
 
+.selected {
+  text-decoration: underline;
+}
+
 /* Styling for game over */
 #game-over {
   background-color: var(--apple-black);
