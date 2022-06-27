@@ -173,6 +173,4 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/c
 - Type "git clone" followed by the copied URL.
 - Press enter to create the clone.
 
-# Deployment
-
 # Credits
