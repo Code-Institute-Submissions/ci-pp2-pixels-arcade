@@ -84,6 +84,7 @@ function disableButtons() {
  * They set the difficulty level, start the game and disable the buttons from being selected once the game starts
  */
 function levelOne() {
+  startOne.classList.add("selected")
   numberOfHoles = 6
   difficulty = "easy"
   disableButtons()
@@ -91,6 +92,7 @@ function levelOne() {
 }
 
 function levelTwo() {
+  startTwo.classList.add("selected")
   numberOfHoles = 9
   difficulty = "medium"
   disableButtons()
@@ -98,6 +100,7 @@ function levelTwo() {
 }
 
 function levelThree() {
+  startThree.classList.add("selected")
   numberOfHoles = 9
   difficulty = "hard"
   disableButtons()
