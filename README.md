@@ -36,6 +36,7 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 
 ## User Story
 - As a user, I would like to easily browse for a game to play
+- As a user, I would like to easily understand the game I am playing
 - As a user, I would like to select the level of difficulty 
 - As a user, I would like feedback on my progress in the game as I am playing
 - As a user, I would like to know how I did when the game is finished
