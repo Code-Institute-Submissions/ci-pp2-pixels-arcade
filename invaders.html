@@ -41,25 +41,29 @@
   <section id="main-screen">
 
     <h1>Space Invaders</h1>
+    
     <!-- Game Buttons -->
     <div>
       <button id="start">Start!</button>
       <button onclick="changeWrap()">Wrap <span id="wrap">Off</span></button>
       <button id="reset">Reset</button>
     </div>
+
     <!-- Stats -->
     <div id="stats">
       <p>Lives: <span id="tank-lives">3</span></p>
       <p>Score: <span id="score">0</span></p>
     </div>
+    
     <!-- Game board -->
     <div id="board"></div>
+    
     <!-- On screen controls -->
     <div id="directions">
       <button id="left" name="move" aria-label="left arrow"></button>
       <button id="fire">FIRE!</button>
       <button id="right" name="move" aria-label="right arrow"></button>
-  </div>
+    </div>
 
   <!-- Game Over -->
   <div id="game-over">
