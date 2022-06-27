@@ -156,6 +156,99 @@ Wireframes were created in Balsamiq.
 
 # Testing
 
+## [HTML Validator](https://validator.w3.org/)
+- Index:
+  - ![Index results](readme-docs/index-html.webp)
+  - [Link to HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2F)
+- Slap-a-Rabbit:
+  - ![Slap-a-Rabbit results](readme-docs/rabbit-html.webp)
+  - [Link to HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Frabbit.html)
+- Rock, Paper, Scissors:
+  - ![Rock, Paper, Scissors results](readme-docs/rps-html.webp)
+  - [Link to HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Frps.html)
+- Dead Heads Memory Game:
+  - ![Dead Heads Memory Game results](readme-docs/cards-html.webp)
+  - [Link to HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Fcards.html)
+- Space Invaders:
+  - ![Space Invaders results](readme-docs/invaders-html.webp)
+  - [Link to HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Finvaders.html)
+
+## [CSS Validator](https://jigsaw.w3.org/css-validator/)
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+- [Index results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Slap-a-Rabbit results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Frabbit.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Rock, Paper, Scissors results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Frps.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Dead Heads Memory Game results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Fcards.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Space Invaders results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsjecollins.github.io%2Fci-pp2-pixels-arcade%2Finvaders.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+All pages passed CSS3 validation, however there were 8 warnings for cards.css related to vendor extensions.
+
+## [JSHint](https://jshint.com/)
+
+JSHint was used to detect errors in the JavaScript.
+- All JavaScript files were flagged for missing semicolons, as expected.
+- An unused variable was flagged in rabbit.js due to the reset button not being handled correctly in the DOM. This was corrected.
+- No warnings were flagged in rps.js.
+- One warning was flagged in cards.js:
+  - "184	Expected an assignment or function call and instead saw an expression."
+  - This occurred due to the ternary operator.
+- One warning was flagged in invaders.js:
+  - "129	Expected an assignment or function call and instead saw an expression."
+  - This occurred due to the placement of bombInterval within the moveBoss function, however it does not prevent the code from running as intended.
+
+## Lighthouse
+The site was tested using Lighthouse in Chrome DevTools throughout the development to check performance, accessibiltiy, best practices and SEO. The final test on Lighthouse was run on incognito mode. The results are below.
+
+<details>
+<summary>Lighthouse Results</summary>
+
+![Lighthouse Results](readme-docs/lighthouse.webp)
+</details>
+
+## Browser Compatibility
+The website was tested on:
+- Chrome Version 101.0.4951.67
+- Firefox Version 101.0.4951.67
+- Edge Version 101.0.1210.53
+- Safari iOS Version 15.4.1
+
+## Testing Functionality
+
+## Testing User Story
+- "As a user, I would like to easily browse for a game to play"
+  - The main page acts as a list or library of the game content of the website. All games available are presented in a grid as the focus of the main page. Users can access any of the games on the site from this page.
+  - The navigation bar in the header contains links to the games available on the site. This navigation bar is present across all pages so that users can easily jump between game pages when they choose.
+
+- "As a user, I would like to easily understand the game I am playing"
+  - All games present on the website are simple, classic games that are intuitive to play.
+  - All game pages feature an instruction overlay that can be displayed when the user clicks on "Instructions" directly below the the game's title. The basics of the game are presented to user and they can reference this overlay whenever they wish.
+
+- "As a user, I would like to select the level of difficulty"
+  - Two of the games available on the website feature difficulty levels.
+    - In Slap-a-Rabbit, the user can select between three levels with increasing gameplay speeds.
+    - In Dead Heads Memory Game, the user can select between three levels which generate increasing numbers of pairs of cards to match.
+  - Rock, Paper, Scissors allows the user to select the length of the game, however this does not really effect the "difficulty" of the game itself.
+  - Currently, Space Invaders does not feature level difficulties.
+
+- "As a user, I would like feedback on my progress in the game as I am playing"
+  - In Slap-a-Rabbit, above the board there is a timer counting down for 30 seconds so that the user may monitor the length of time they have remaining. There is also a "slaps" counter that provides the user a running tally of the points as they play.
+  - In Rock, Paper, Scissors, with each decision the user's and computer's choice image is updated, their score is incremented and the round result is updated to tell the user the result of each round.
+  - In Dead Heads Memory Game, above the board there is a timer counting up from the beginning of the game, a score counter that updates with each successul pair match and an "attempts" counter telling the user how many times they failed to match a pair of cards.
+  - In Space Invaders, there is a lives counter for the user that counts down each time a bomb hits the tank and a score counter that counts up each time an invader or the boss is killed.
+
+- "As a user, I would like to know how I did when the game is finished"
+  - Each game features a Game Over overlay which displays the user's final score and, in the case of Rock, Paper, Scissors or Space Invaders, whether the user won or lost.
+
+- "As a user, I would like to be able to quickly reset the game whenever I choose"
+  - All games feature a reset button in the UI. This simply reloads the the page.
+
 # Deployment
 ## Steps to deploy site:
 - In the GitHub repository, navigate to the "Settings" tab.
