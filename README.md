@@ -44,21 +44,62 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 # Features
 
 ## Universal
-### Navigation Bar
+### Header
+![Header](readme-docs/header.webp)
+
+### Instructions
+<details>
+<summary>Instructions Example Image</summary>
+
+![Instructions](readme-docs/instructions-invaders.webp)
+</details>
+
+## Game Over
+<details>
+<summary>Game Over Example Image</summary>
+
+![Game Over](readme-docs/game-over-cards.webp)
+</details>
 
 ### Footer
+![Footer](readme-docs/footer.webp)
 
 ## Index Page
+<details>
+<summary>Index Page Image</summary>
+
+![Index Page](readme-docs/index.webp)
+</details>
 
 The index page acts as a simple menu for the games available on the website. It contains a grid of images linking to the game pages, with their respective titles underneath.
 
 ## Slap-a-Rabbit
+<details>
+<summary>Slap-a-Rabbit Image</summary>
+
+![Slap-a-Rabbit](readme-docs/rabbit.webp)
+</details>
 
 ## Rock, Paper, Scissors
+<details>
+<summary>Rock, Paper, Scissors Image</summary>
+
+![Rock, Paper, Scissors](readme-docs/rps.webp)
+</details>
 
 ## Dead Heads Memory Game
+<details>
+<summary>Dead Heads Memory Game Image</summary>
+
+![Dead Heads Memory Game](readme-docs/cards.webp)
+</details>
 
 ## Space Invaders
+<details>
+<summary>Space Invaders Image</summary>
+
+![Space Invaders](readme-docs/invaders.webp)
+</details>
 
 ## Future Expansion
 
@@ -79,6 +120,24 @@ Google Fonts was used to import the Press Play 2P font to style.css. This is the
 ## Wireframes
 
 Wireframes were created in Balsamiq.
+
+<details>
+<summary>Index Page Wireframe</summary>
+
+![Index Wireframe](readme-docs/wireframe-index.png)
+</details>
+
+<details>
+<summary>Game Screen Wireframe</summary>
+
+![Game Screen Wireframe](readme-docs/wireframe-game-screen.png)
+</details>
+
+<details>
+<summary>Game Over Wireframe</summary>
+
+![Game Over Wireframe](readme-docs/wireframe-game-over.png)
+</details>
 
 # Technologies Used
 
