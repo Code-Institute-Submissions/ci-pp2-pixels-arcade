@@ -155,8 +155,8 @@ Wireframes were created in Balsamiq.
 
 # Testing
 
-## Deployment
-### Steps to deploy site:
+# Deployment
+## Steps to deploy site:
 - In the GitHub repository, navigate to the "Settings" tab.
 - Scroll down to "Pages" in the menu on the left hand side.
 - Under the heading "Source", click the drop-down menu and select "main" branch.
@@ -166,7 +166,7 @@ Wireframes were created in Balsamiq.
 
 The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/ci-pp2-pixels-arcade)
 
-### Steps to clone site:
+## Steps to clone site:
 - In the GitHub repository, click the "Code" button.
 - Select "HTTPS" and copy the URL.
 - Open Git Bash and navigate to the repository where you would like to locate the cloned repository.
