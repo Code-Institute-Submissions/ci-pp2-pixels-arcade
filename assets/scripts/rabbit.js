@@ -22,6 +22,9 @@ let holesArray = []
 let holes = []
 let rabbits = []
 
+let soundHit = new Audio("assets/sounds/hit.mp3")
+soundHit.volume = 0.3
+
 /**
  * Function to generate the holes and rabbits
  * Can change the number of holes when levels are selected
@@ -144,6 +147,7 @@ function popUp() {
   score.innerHTML = points
   this.style.backgroundImage = "url('assets/images/rabbit/rabbit-bonk.png')"
   this.style.pointerEvents = "none"
+  soundHit.play()
   setTimeout(() => {
     this.style.backgroundImage = "url('assets/images/rabbit/rabbit.png')"
     this.style.pointerEvents = "all"

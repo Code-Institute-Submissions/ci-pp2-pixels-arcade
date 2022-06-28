@@ -91,6 +91,10 @@ let firstCard
 let secondCard
 let gameCards = []
 
+let soundFlip = new Audio("assets/sounds/flip.mp3")
+soundFlip.volume = 0.5
+soundFlip.playbackRate = 5
+
 // Starting to construct the board
 const board = document.getElementById("board")
 const grid = document.createElement("div")
@@ -141,7 +145,6 @@ function createCards() {
     const backFace = document.createElement('div');
     backFace.classList.add('back-face');
     
-    
     grid.appendChild(card);
     card.appendChild(frontFace);
     card.appendChild(backFace);
@@ -161,6 +164,7 @@ function createCards() {
   if (this === firstCard) return
 
   this.classList.toggle("flip")
+  soundFlip.play()
 
   if (!hasFlippedCard) {
     // First click

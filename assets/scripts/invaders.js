@@ -36,6 +36,9 @@ let bossDied = false
 let invadersDead = false
 let bombInterval
 
+let soundExplosion = new Audio("assets/sounds/explosion.mp3")
+soundExplosion.volume = 0.1
+
 // Our for loop creating our board
 for (let i = 0; i < 240; i++) {
   const square = document.createElement("div")
@@ -162,6 +165,7 @@ function spawnBoss() {
     if (squares[bombPosition].classList.contains("tank")) {
       squares[bombPosition].classList.remove("bomb")
       squares[bombPosition].classList.add("boom")
+      soundExplosion.play()
       setTimeout(() => squares[bombPosition].classList.remove("boom"), 200)
       clearInterval(bombId)
       tankHealth -= 1
@@ -209,6 +213,7 @@ function shoot(event) {
       squares[missilePosition].classList.remove("missile")
       squares[missilePosition].classList.remove("invader")
       squares[missilePosition].classList.add("boom")
+      soundExplosion.play()
 
       setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
       clearInterval(missileId)
@@ -223,6 +228,7 @@ function shoot(event) {
     if (squares[missilePosition].classList.contains("boss") && bossHealth > 1) {
       squares[missilePosition].classList.remove("missile")
       squares[missilePosition].classList.add("boom")
+      soundExplosion.play()
       bossHealth -= 1
       setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
       clearInterval(missileId)
@@ -231,6 +237,7 @@ function shoot(event) {
       squares[missilePosition].classList.remove("missile")
       squares[missilePosition].classList.remove("boss")
       squares[missilePosition].classList.add("boom")
+      soundExplosion.play()
 
       clearInterval(bossId)
       setTimeout(() => squares[missilePosition].classList.remove("boom"), 200)
