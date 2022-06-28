@@ -367,7 +367,15 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/c
   - [Tania Rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
 - The code for Space Invaders was adapted from:
   - [Ania Kubow](https://www.youtube.com/watch?v=3Nz4Yp7Y_uA&ab_channel=CodewithAniaKub%C3%B3w)
+- The fix for the card flip not working correctly on iPhone came from this [Stack Overflow thread](https://stackoverflow.com/questions/59716761/flip-card-bug-safari)
+- The code to add sound effects is based on this [this tutorial by Mt. Ford Studios](https://www.youtube.com/watch?v=LfSBbrGqFV0&ab_channel=Mt.FordStudios)
+- The code to add the 404 page is based on [this video by Dani Krossing](https://www.youtube.com/watch?v=kPtS4vO42II&ab_channel=DaniKrossing)
+
 
 ## Media
 
 - The images for Rock, Paper, Scissors are from this [free clipart image](https://www.clipartmax.com/middle/m2i8i8G6H7K9Z5H7_rock-paper-scissors-clipart-rock-paper-scissors-clip-art/)
+- Sound effects from Pixabay:
+  - [Slap-a-Rabbit hit sound](https://pixabay.com/sound-effects/karate-chop-6357/) by ccolbert70Eagles23
+  - [Dead Heads Memory Game flip sound](https://pixabay.com/sound-effects/book-page-45210/) by fellur
+  - [Space Invaders explosion sound](https://pixabay.com/sound-effects/8-bit-explosion1wav-14656/) by timgormly
