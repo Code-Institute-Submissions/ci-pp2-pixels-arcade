@@ -97,6 +97,21 @@ The index page acts as a simple menu for the games available on the website. A h
 ![Slap-a-Rabbit](readme-docs/rabbit.webp)
 </details>
 
+Slap-a-Rabbit is a a whack-a-mole style game. The title and presentation of the game are intended to make it as intuitive as possible on first interaction. Immediately on page load, the user is presented with the game title, the option to read instructions, buttons for level selection and game reset, and the empty game board itself with the default time and score displays.
+- Instructions:
+  - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
+- Buttons:
+  - On selecting a level, the game begins, the timer starts and the rabbits pop up from the holes.
+  - The level buttons are disabled during gameplay to prevent the user from triggering the startGame function in JS multiple times and breaking the game.
+  - The selected level is underlined.
+  - The reset button can be selected at any time and will reload the page.
+- Gameplay:
+  - On game start, the user is given 30 seconds to play the game, as explained in the instructions overlay.
+  - The speed of the rabbits is determined by the level selected.
+  - When a rabbit appears from a hole, the user can click or tap the rabbit which changes the image briefly to indicate interaction. The user is prevented from selecting the same rabbit multiple times.
+  - Points are incremented and displayed each time a rabbit is "slapped."
+  - At the end of 30 seconds, the Game Over overlay is displayed with the user's total "slaps" and the user can then decide if they would like to play again or return to the index page.
+
 ## Rock, Paper, Scissors
 <details>
 <summary>Rock, Paper, Scissors Image</summary>
