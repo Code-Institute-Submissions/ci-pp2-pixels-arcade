@@ -118,6 +118,11 @@ Google Fonts was used to import the Press Play 2P font to style.css. This is the
 
 ## Buttons and Links
 
+- Links are styled with a dark green transition to provide feedback to the user when hovered over.
+- Level and reset buttons are styled with green text on black and transition to white on green when hovered over. When selected, the font-weight increases and green underline is applied to mark which level is active. 
+- Overlay buttons are styled with black text on a white background to stand out on the black overlay. When hovered over, they transition to white text on a dark green background.
+- Though not explicitly a link or button, the instructions text on each game is styled so a underline appears when hovered over to indicate to the user that it is interactive. 
+
 ## Wireframes
 
 Wireframes were created in Balsamiq.
