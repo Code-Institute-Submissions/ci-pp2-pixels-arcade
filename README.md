@@ -88,9 +88,7 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 ![Index Page](readme-docs/index.webp)
 </details>
 
-The index page acts as a simple menu for the games available on the website. It contains a grid of images linking to the game pages, with their respective titles underneath.
-
-
+The index page acts as a simple menu for the games available on the website. A heading invites the user to select the game they would like to play from the selection below which contains a grid of images linking to the game pages, with their respective titles underneath.  
 
 ## Slap-a-Rabbit
 <details>
