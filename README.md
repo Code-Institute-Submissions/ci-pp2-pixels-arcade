@@ -139,12 +139,40 @@ Rock, Paper, Scissors is a classic two-player game. Here the user can play again
 ![Dead Heads Memory Game](readme-docs/cards.webp)
 </details>
 
+Dead Heads Memory Game is a classic card game where the user matches pairs while timed. It features instructions, buttons to select diffculty and reset the game, and displays for the time, correctly matched pairs and failed attempts.
+- Instructions:
+  - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
+- Buttons:
+  - On selecting a difficulty, a board of six, eight or 10 pairs of cards is generated and displayed. 
+  - The difficulty buttons are disabled during gameplay to prevent generating further cards.
+  - The selected difficulty is bolded and underlined.
+  - The reset button can be used at any time to reload the page.
+- Gameplay:
+  - On game start, the timer begins.
+  - The user can flip two cards at a time only. If the cards match, they remain face up, the pairs tally is incremented, and the user can select a further two cards. If they do not match, the cards flip back over, the attemps tall is incremented, and the user can then select two more cards to flip.
+  - Upon successfully matching all pairs on the board, the Game Over overlay appears with the number of pairs the user has matched and the time in which the user has done so. The user then has the option to play again or return to the index page.
+
 ## Space Invaders
 <details>
 <summary>Space Invaders Image</summary>
 
 ![Space Invaders](readme-docs/invaders.webp)
 </details>
+
+Space Invaders is a classic arcade game in which the user controlling a sprite at the bottom of the screen must shoot enemies before they reach the bottom of the screen. It features instructions, buttons to start the game, change the enemy wrap or reset the page, displays for lives and the score, and on-screen controls.
+- Instructions:
+  - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
+- Buttons:
+  - The user can begin the game by selecting the start button.
+  - The user can change how to enemies move across the page by clicking the wrap button.
+  - The user can reset the page at any point with the reset button.
+- Gameplay:
+  - On game start, the invaders are generated and begin to move across the game board. After a set period of time, an enemy spaceship or "boss" appears which moves back and forth at the top of the screen and drops bombs which can damage the tank below.
+  - Using either keyboard or on-screen controls, the user can move the tank left or right at the bottom of the screen and fire a missile at the enemies.
+  - In line with the Rule of Three, the tank has each lives, which can be lost when hit with the bomb. And the boss must be hit three times to destory it.
+  - When an invader is killed the score is incremented and when the tank is hit the lives display decreases by one.
+  - The game can by won by destroying all the invaders and the boss. The game is lost when the invaders reach the bottom of the screen or the tank, or the tank loses all its lives.
+  - When the game ends, the Game Over overlay is displayed telling the user if they lived or died and displays the number of invaders killed.
 
 ## Future Expansion
 
