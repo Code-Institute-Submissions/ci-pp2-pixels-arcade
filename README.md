@@ -103,7 +103,7 @@ Slap-a-Rabbit is a a whack-a-mole style game. The title and presentation of the 
 - Buttons:
   - On selecting a level, the game begins, the timer starts and the rabbits pop up from the holes.
   - The level buttons are disabled during gameplay to prevent the user from triggering the startGame function in JS multiple times and breaking the game.
-  - The selected level is underlined.
+  - The selected level is underlined and font is bolded.
   - The reset button can be selected at any time and will reload the page.
 - Gameplay:
   - On game start, the user is given 30 seconds to play the game, as explained in the instructions overlay.
@@ -118,6 +118,19 @@ Slap-a-Rabbit is a a whack-a-mole style game. The title and presentation of the 
 
 ![Rock, Paper, Scissors](readme-docs/rps.webp)
 </details>
+
+Rock, Paper, Scissors is a classic two-player game. Here the user can play against the computer in what is a essentially a random chance game. The game features instructions below the title, buttons to choose between best of three or five and to reset the board, displays for the computer's and user's choices, the scores, the round result, and the selectable options for the user at the bottom.
+- Instructions:
+  - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
+- Buttons:
+  - The user has the option of playing best of three or best of five.
+  - When selected, the button is underlined and font is bolded.
+  - The level buttons are disabled during gameplay.
+  - The reset button reloads the page at any stage.
+- Gameplay:
+  - The user starts each round by selecting from one of the options at the bottom of the screen.
+  - With each selection, the displays are updated so that the choices of the user and computer are shown as images, the scores are incremented and displayed, and the round result is updated and displayed.
+  - When either the user or computer reaches the required number of wins, the Game Over overlay is displayed and the result of "YOU WIN" or "YOU LOSE" is displayed depending on the outcome. The user can then decide if they would like to play again or return to the index page. 
 
 ## Dead Heads Memory Game
 <details>
