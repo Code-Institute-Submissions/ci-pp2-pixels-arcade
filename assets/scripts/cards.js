@@ -91,6 +91,7 @@ let firstCard
 let secondCard
 let gameCards = []
 
+// Flip sound
 let soundFlip = new Audio("assets/sounds/flip.mp3")
 soundFlip.volume = 0.5
 soundFlip.playbackRate = 5
