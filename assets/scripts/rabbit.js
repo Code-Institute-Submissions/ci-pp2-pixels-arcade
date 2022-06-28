@@ -22,14 +22,16 @@ let holesArray = []
 let holes = []
 let rabbits = []
 
+
+// Hit sound
 let soundHit = new Audio("assets/sounds/hit.mp3")
 soundHit.volume = 0.3
+soundHit.playbackRate = 1.5
 
 /**
  * Function to generate the holes and rabbits
  * Can change the number of holes when levels are selected
  */
-
 function createHoles() {
   for (let i = 0; i < numberOfHoles; i++) {
     const hole = document.createElement("div")
@@ -40,8 +42,7 @@ function createHoles() {
     rabbit.classList.add("rabbit")
 
     board.appendChild(hole)
-    hole.appendChild(rabbit)
-    
+    hole.appendChild(rabbit)  
   }
 }
 
