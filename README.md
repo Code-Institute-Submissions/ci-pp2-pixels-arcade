@@ -48,6 +48,16 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 ### Header
 ![Header](readme-docs/header.webp)
 
+- The header element features across all pages. It includes the website title flanked by two icons with a navigation bar below.
+- The title is a link which directs the user to the index page. When hovered over, the text transitions to a darker green indicating its interactivity.
+- The navigation bar includes links to the game pages. Similarly to the header, on hover the text transitions to a darker green to provide feedback to the user when interacted with.
+
+### Footer
+![Footer](readme-docs/footer.webp)
+
+- The footer element features social media links and is found on all pages.
+- The links have a similar transition to green as found in the header.
+
 ### Instructions
 <details>
 <summary>Instructions Example Image</summary>
@@ -55,15 +65,21 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 ![Instructions](readme-docs/instructions-invaders.webp)
 </details>
 
-## Game Over
+- Each game page features a instructions overlay.
+- The instructions overlay can be displayed by clicking on the text "instructions" beneath the game's title. The interactivity is indicated by the cursor changing to a pointer and the text being underlined when hovered over.
+- The overlay includes the game title, simple instructions and a link styled as a button to dismiss the overlay.
+- The overlay is styled with white text on a black background. A box-shadow gives the illusion of the overlay floating over the game board. The "Got It!" link is styled as a button with black text on a white background that transitions to white text on a green background when hovered over to indicate to the user that they are about to interact with it.
+
+### Game Over
 <details>
 <summary>Game Over Example Image</summary>
 
 ![Game Over](readme-docs/game-over-cards.webp)
 </details>
 
-### Footer
-![Footer](readme-docs/footer.webp)
+- Each game page features a Game Over overlay when the game ends.
+- The overlay includes a heading announcing the end of the game, text informing the user of the result (whether they won or their points), and two links styled as buttons that allow the user to either play again or return to the index page.
+- The overlay is styled with green text on a black background. Similarly to the instructions overlay, it features a box-shadow to give an illusion of it floating over the game. The links are styled similarly as well with the same transition from black on white to white on green when hovered over.
 
 ## Index Page
 <details>
@@ -73,6 +89,8 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 </details>
 
 The index page acts as a simple menu for the games available on the website. It contains a grid of images linking to the game pages, with their respective titles underneath.
+
+
 
 ## Slap-a-Rabbit
 <details>
