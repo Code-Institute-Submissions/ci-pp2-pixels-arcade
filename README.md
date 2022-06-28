@@ -8,7 +8,7 @@ Currently available games include:
 - Dead Heads Memory Game
 - Space Invaders
 
-The site is targeted towards users who are searching for quick, accessible games to pass the time on their PC or mobile phone.
+The concept of the site is one targeted towards users who are searching for quick, accessible games to pass the time on their PC or mobile phone. The games were chosen for their intuitive gameplay so that a user can "pick up and play" quickly. The website is built with future expansion in mind.
 
 ![Pixel's Arcade](readme-docs/amiresponsive.webp)
 
@@ -65,7 +65,7 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 ![Instructions](readme-docs/instructions-invaders.webp)
 </details>
 
-- Each game page features a instructions overlay.
+- Each game page features an instructions overlay.
 - The instructions overlay can be displayed by clicking on the text "instructions" beneath the game's title. The interactivity is indicated by the cursor changing to a pointer and the text being underlined when hovered over.
 - The overlay includes the game title, simple instructions and a link styled as a button to dismiss the overlay.
 - The overlay is styled with white text on a black background. A box-shadow gives the illusion of the overlay floating over the game board. The "Got It!" link is styled as a button with black text on a white background that transitions to white text on a green background when hovered over to indicate to the user that they are about to interact with it.
@@ -186,11 +186,17 @@ The 404 page is very simply styled. It features a link styled as a button that d
 
 # Design
 
-The overall design is a retro aesthetic inspired by the Apple IIc. The games are generated on a "board" on each individual page and wrapped in this style to meld them together as a collection.
+The overall design is a retro aesthetic inspired by the Apple IIc. The colour design and typography are heavily influenced by the Apple's display. Wherever possible, corners are rounded like the Apple's casing in an attempt to mimic the experience of viewing a game through the Apple's monitor.
+
+The games are generated on a "board" on each individual page and wrapped in this style to meld them together as a collection. Certain design features are present across all pages to attempt to tie the games together - though their individual designs may not match - so that the site has an arcade-like feeling where the user can find different kinds of games all in one place.
+
+The site is designed with future expansion in mind. The index page features links to the games as pictures in a simple grid in the center of the screen with the intention to slot new games neatly into this grid as the site's content grows. 
 
 ## Colour
 
-There are three main colours featured across the website - green, black and off-white. These are based on the Apple IIc's green phosphorous display and it's casing.
+There are three main colours featured across the website - green, black and off-white. These are based on the Apple IIc's green phosphorous display and it's casing. Although, the colours are inverted in a manner, as the "main screen" is white surrounded by black rather than vice versa for readability.
+
+The minimalist colour palette is also intended to be unobtrusive. It should not draw attention from games themselves.
 
 ## Typography
 
@@ -202,6 +208,22 @@ Google Fonts was used to import the Press Play 2P font to style.css. This is the
 - Level and reset buttons are styled with green text on black and transition to white on green when hovered over. When selected, the font-weight increases and green underline is applied to mark which level is active. 
 - Overlay buttons are styled with black text on a white background to stand out on the black overlay. When hovered over, they transition to white text on a dark green background.
 - Though not explicitly a link or button, the instructions text on each game is styled so a underline appears when hovered over to indicate to the user that it is interactive. 
+
+## Game Designs
+
+### Slap-a-Rabbit
+Slap-a-Rabbit is a whack-a-mole style game. The images were drawn in Inkscape with a cartoony design to go with the humorous tone intended. Similarly, the sound chosen for "slapping" is intentionally over-the-top.
+
+### Rock, Paper, Scissors
+Rock, Paper, Scissors is very minimalistically designed as the choice of using this game on the website was to display handling DOM elements. As such, the focus is on changing the UI when the user interacts with the game.
+
+### Dead Heads Memory Game
+Dead Heads Memory Game has a slightly more morbid design purely due to the fact that I have a large collection of images I had previously created for other projects. However, they created an interesting, memorable look on the black cards.
+
+### Space Invaders
+Space Invaders is a classic arcade game. The intention was to honour that when creating the sprites and so this game ended up most closely matching the overall style of the website. The explosion sound use is reminiscent of classic arcade sounds. 
+
+The "invaders" are a modified version of the website's logo. The controls are very minimalist and easy to understand. The game board itself features a box-shadow to "lift" the game off the page to attempt to give the feeling of a screen sitting up in front of you like an arcade cabinet.
 
 ## Wireframes
 
@@ -237,7 +259,7 @@ Wireframes were created in Balsamiq.
 - [Balsamiq](https://balsamiq.com): to create wireframes.
 - [GIMP](https://www.gimp.org): to edit images for Rock, Paper, Scissors.
 - [Inkscape](https://inkscape.org): to create images for Slap-a-Rabbit, and arrows for Space Invaders.
-- [Aseprite](https://www.aseprite.org): to create the logo, and the sprites for Space Invaders
+- [Aseprite](https://www.aseprite.org): to create the logo, and the sprites for Space Invaders.
 
 # Testing
 
@@ -373,6 +395,7 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/c
 
 
 ## Media
+With the exception of the images for Rock, Paper, Scissors, I created the images on the website.
 
 - The images for Rock, Paper, Scissors are from this [free clipart image](https://www.clipartmax.com/middle/m2i8i8G6H7K9Z5H7_rock-paper-scissors-clipart-rock-paper-scissors-clip-art/)
 - Sound effects from Pixabay:
