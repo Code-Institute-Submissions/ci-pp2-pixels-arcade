@@ -108,7 +108,7 @@ Slap-a-Rabbit is a a whack-a-mole style game. The title and presentation of the 
 - Gameplay:
   - On game start, the user is given 30 seconds to play the game, as explained in the instructions overlay.
   - The speed of the rabbits is determined by the level selected.
-  - When a rabbit appears from a hole, the user can click or tap the rabbit which changes the image briefly to indicate interaction. The user is prevented from selecting the same rabbit multiple times.
+  - When a rabbit appears from a hole, the user can click or tap the rabbit which changes the image briefly and plays a sound to indicate interaction. The user is prevented from selecting the same rabbit multiple times.
   - Points are incremented and displayed each time a rabbit is "slapped."
   - At the end of 30 seconds, the Game Over overlay is displayed with the user's total "slaps" and the user can then decide if they would like to play again or return to the index page.
 
