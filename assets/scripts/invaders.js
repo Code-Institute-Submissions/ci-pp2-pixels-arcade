@@ -36,6 +36,7 @@ let bossDied = false
 let invadersDead = false
 let bombInterval
 
+// Explosion sound effect
 let soundExplosion = new Audio("assets/sounds/explosion.mp3")
 soundExplosion.volume = 0.1
 soundExplosion.playbackRate = 2
@@ -97,14 +98,12 @@ function moveInvaders() {
   for (let i = 0; i < invaders.length; i++) {
     invaders[i] += direction
   }
-  
   draw() 
   
   if (invaders.length === invadersRemoved.length) {
     invadersDead = true
     clearInterval(invadersId)
   }
-  
   checkEnd()
 }
 
@@ -141,7 +140,6 @@ function spawnBoss() {
     bossDirection  = + 1
     bossGoingRight = true
     }
-   
   }
 }
 
