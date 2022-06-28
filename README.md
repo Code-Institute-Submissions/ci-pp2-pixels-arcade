@@ -174,6 +174,14 @@ Space Invaders is a classic arcade game in which the user controlling a sprite a
   - The game can by won by destroying all the invaders and the boss. The game is lost when the invaders reach the bottom of the screen or the tank, or the tank loses all its lives.
   - When the game ends, the Game Over overlay is displayed telling the user if they lived or died and displays the number of invaders killed.
 
+## 404 Page
+<details>
+<summary>404 Page Image</summary>
+
+![404 Page](readme-docs/error-page.webp)
+</details>
+The 404 page is very simply styled. It features a link styled as a button that directs the user back to the home page.
+
 ## Future Expansion
 
 # Design
