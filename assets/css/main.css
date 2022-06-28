@@ -193,6 +193,16 @@ footer a {
   line-height: 5rem;
 }
 
+/* 404 styling */
+.error-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 2250px) {
   html {
     font-size: 150%;
