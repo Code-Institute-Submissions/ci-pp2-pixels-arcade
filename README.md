@@ -356,6 +356,29 @@ The website was tested on:
 - "As a user, I would like to be able to quickly reset the game whenever I choose"
   - All games feature a reset button in the UI. This simply reloads the the page.
 
+## Bugs
+
+### Fixed Bugs
+- Dead Heads Memory Game:
+  1. On iPhone, images were not displaying correctly when cards flipped.
+    - Safari was not handling transform correctly prior to the addition of "translateZ(1px)" 
+    - The solution was found in this [thread on Stack Overflow](https://stackoverflow.com/questions/59716761/flip-card-bug-safari)
+
+- Space Invaders:
+  1. On iPhone, the "explosion" sound effect was not playing correctly.
+    - This is due to iOS not allowing autoplay of sound. The user has to trigger sound through an interaction. Once it has been played once, it will work as intended.
+    - While it is not a perfect solution, the sound is muted and triggered on game start, then unmuted when the shoot or dropBomb functions are called. So, the sound now plays as intended.
+    - In future, the intention is to introduce a menu where the user can adjust their audio settings so that they have control volume or mute sounds.
+  2. While it did not prevent gameplay, when a missile exited the top of the screen, or a bomb or invader exited the bottom of the screen, the sprites were removed but in console the following error was logged indefinitely: "Uncaught TypeError: Cannot read properties of undefined (reading 'classList')".
+    - I believe this was due to JS looking for the next div, but as it had reached the top or bottom of the grid of divs there was nowhere to look.
+    - A somewhat hacky way to fix this involved extending the grid and telling JS to remove the "bombs" or "invaders" a row earlier in the grid. And similarly at the top of the game grid, the missile is removed before it actually reaches the top row.
+  3. The game would end prematurely if all invaders were removed but the boss was still alive.
+    - This was a two part problem. The first simply involved changing the win conditions so that the game didn't count the user as winning unless both invaders and boss were dead.
+    - However, there was also an issue where though the invaders were removed, the game was still tracking the progress of their array down the grid. So, a variable of invadersDead was added that is just a simple boolean. It's initially declared as false. When all invaders are removed, now instead of calling checkEnd() the moveInvaders function changes invadersDead to true and we also clear the interval to stop the game moving them even though they're gone. If invadersDead is true and bossDied is true, the user wins and the user no longer loses from the game moving invisible invaders.
+
+### Known Bugs
+
+
 # Deployment
 ## Steps to deploy site:
 - In the GitHub repository, navigate to the "Settings" tab.
