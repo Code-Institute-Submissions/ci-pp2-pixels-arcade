@@ -59,7 +59,11 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.ip/c
 - The links have a similar transition to green as found in the header.
 
 ### Instructions
+<details>
+<summary>Instructions Example Image</summary>
 
+![Instructions](readme-docs/instructions-invaders.webp)
+</details>
 
 - Each game page features an instructions overlay.
 - The instructions overlay can be displayed by clicking on the text "instructions" beneath the game's title. The interactivity is indicated by the cursor changing to a pointer and the text being underlined when hovered over.
