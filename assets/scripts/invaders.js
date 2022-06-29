@@ -39,7 +39,6 @@ let bombInterval
 // Explosion sound effect
 let soundExplosion = new Audio("assets/sounds/explosion.mp3")
 soundExplosion.volume = 0.1
-soundExplosion.muted = true
 soundExplosion.playbackRate = 4
 
 // Our for loop creating our board
@@ -148,6 +147,7 @@ function spawnBoss() {
  * function for boss to drop bombs and kill the tank
  */
  function dropBomb() {
+  soundExplosion.muted = false
   let bombId  = setInterval(moveBomb, 200)
   let bombPosition = bossPosition
   
@@ -195,6 +195,7 @@ function spawnBoss() {
  * Can trigger with up arrow, space or fire button on page
  */ 
 function shoot(event) {
+  soundExplosion.muted = false
   let missileId
   let missilePosition = currentPosition
 
@@ -297,8 +298,8 @@ function endGame() {
 
 // startGame function 
 function startGame() {
+  soundExplosion.muted = true
   soundExplosion.play()
-  soundExplosion.muted = false
   startButton.removeEventListener("click", startGame)
   intervalTime = 500
   invadersId = setInterval(moveInvaders, intervalTime)
