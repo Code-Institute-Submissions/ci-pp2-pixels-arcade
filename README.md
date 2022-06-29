@@ -183,6 +183,24 @@ Space Invaders is a classic arcade game in which the user controlling a sprite a
 The 404 page is very simply styled. It features a link styled as a button that directs the user back to the home page.
 
 ## Future Expansion
+The website is designed with expansion in mind.
+1. _Additional games_. There are four playable games currently available on the site. These games were chosen from ten that I have been working on as they are the most interesting and complete at the time of starting the project. The intention is to expand with further games.
+2. _Expanding current games_.
+  - Slap-a-Rabbit:
+    - Additional difficulty levels with a large board, more holes and more variety in speed.
+  - Rock, Paper, Scissors:
+    - Different game modes with an expanded range of choices, e.g. Rock, Paper, Scissors, Lizard, Spock.
+  - Dead Heads Memory Game:
+    - Additional levels with a larger board and more cards.
+    - New difficulty challenge including a timer so the user has to race against the clock.
+  - Space Invaders:
+    - Additional levels including different patterns for the invaders, different or increasing speeds, and new enemies.
+    - The option for a progressive game where new enemies are spawned either after a certain time or upon removal of all currently enemies and the score and lives are carried forward.
+3. _High scores_. A separate page where scores can be imported, stored and updated upon completion of a game. It could be unique to the individual user to track themselves or available to anyone who uses the site to compare and compete with other users, or both. This may have to include having users create profiles, or perhaps they could be prompted to enter their initials on completion of the game, like in an arcade.
+4. _Game sections_. Currently unnecessary, but if the website were to expand there could be the potential to include game categories, e.g.:
+  - Having separate single-player or multiplayer sections so that users can browse games they can play against other people.
+  - Device specific categories. Not all games are suited to touchscreens. While they can be adapted in some ways, like Space Invaders, it may be necessary in some cases to state clearly to users whether they can play a particular game on their device.
+  5. _Support or contact page_. If a website such as this were to be available to users in real life, a method for users to report bugs or ask for help would be necessary.
 
 # Design
 
@@ -330,6 +348,37 @@ The website was tested on:
 - Safari iOS Version 15.4.1
 
 ## Testing Functionality
+The website was tested on the above browsers for these functionality tests.
+
+<details>
+<summary>Universal Features Testing</summary>
+
+![Universal Features](readme-docs/pp2-testing-universal)
+</details>
+
+<details>
+<summary>Slap-a-Rabbit Testing</summary>
+
+![Slap-a-Rabbit](readme-docs/pp2-testing-rabbit.png)
+</details>
+
+<details>
+<summary>Rock, Paper, Scissors Testing</summary>
+
+![Rock, Paper, Scissors](readme-docs/pp2-testing-rps.png)
+</details>
+
+<details>
+<summary>Dead Heads Memory Game Testing</summary>
+
+![Dead Heads Memory Game](readme-docs/pp2-testing-cards.png)
+</details>
+
+<details>
+<summary>Space Invaders Testing</summary>
+
+![Space Invaders](readme-docs/pp2-testing-invaders.png)
+</details>
 
 ## Testing User Story
 - "As a user, I would like to easily browse for a game to play"
