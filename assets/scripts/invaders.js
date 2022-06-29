@@ -296,8 +296,8 @@ function endGame() {
 
 // startGame function 
 function startGame() {
-  soundExplosion.muted
-  soundExplosion.play()
+  // soundExplosion.muted
+  // soundExplosion.play()
   startButton.removeEventListener("click", startGame)
   intervalTime = 500
   invadersId = setInterval(moveInvaders, intervalTime)
