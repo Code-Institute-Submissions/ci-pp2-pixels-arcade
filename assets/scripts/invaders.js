@@ -270,7 +270,7 @@ function checkEnd() {
     }
     
   for (let i = 0; i < (invaders.length); i++) {
-    if ((invaders[i]) > squares.length - 16) {
+    if (invaders[i] > (squares.length - 16)) {
       gameEnd = "DIED"
       endGame()
     }

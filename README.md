@@ -377,7 +377,11 @@ The website was tested on:
     - However, there was also an issue where though the invaders were removed, the game was still tracking the progress of their array down the grid. So, a variable of invadersDead was added that is just a simple boolean. It's initially declared as false. When all invaders are removed, now instead of calling checkEnd() the moveInvaders function changes invadersDead to true and we also clear the interval to stop the game moving them even though they're gone. If invadersDead is true and bossDied is true, the user wins and the user no longer loses from the game moving invisible invaders.
 
 ### Known Bugs
-
+- Space Invaders :
+  1. Similarly to the bugs above, there is a bug with triggering the game end when the invaders reach the bottom of the screen.
+    - The game triggers when the bottom row of invaders reach the divs just below the tank. This means if they're present they are visible below the screen when the Game Over screen displays. If they are not present, the game appears to end before the top row of invaders reaches the very end of the screen.
+    - At present, this bug doesn't have a very large impact on gameplay and is more aesthetically displeasing.
+    - Currently considered fixes include adding a class to the bottom divs that the game can look for to trigger the end when it overlaps with an invader, or to expand on the design of the board so it appears more natural that the game ends when the invaders reach a certain point. The latter, however, wouldn't prevent the user feeling cheated when the top invaders trigger a game over higher on the screen.
 
 # Deployment
 ## Steps to deploy site:
