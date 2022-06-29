@@ -79,7 +79,7 @@ function moveInvaders() {
   remove()
 
   // Bounces the invaders off the edges of the screen. If noWrap === false invaders can wrap instead
-  if (rightEdge && goingRight && noWrap === true) {
+  if (rightEdge && goingRight && noWrap) {
     for (let i = 0; i < invaders.length; i++) {
       invaders[i] += width + 1
       direction = - 1
@@ -87,7 +87,7 @@ function moveInvaders() {
     }
   }
 
-  if (leftEdge && !goingRight && noWrap === true) {
+  if (leftEdge && !goingRight && noWrap) {
     for (let i = 0; i < invaders.length; i++) {
       invaders[i] += width - 1
       direction = 1
@@ -148,7 +148,7 @@ function spawnBoss() {
  */
  function dropBomb() {
   soundExplosion.muted = false
-  let bombId  = setInterval(moveBomb, 200)
+  let bombId = setInterval(moveBomb, 200)
   let bombPosition = bossPosition
   
   function moveBomb() {
@@ -300,6 +300,7 @@ function endGame() {
 function startGame() {
   soundExplosion.muted = true
   soundExplosion.play()
+  wrapToggle.removeEventListener("click", changeWrap)
   startButton.removeEventListener("click", startGame)
   intervalTime = 500
   invadersId = setInterval(moveInvaders, intervalTime)
@@ -308,7 +309,7 @@ function startGame() {
   
   setTimeout(() => {
     spawnBoss()
-  }, 6000)
+  }, 10000)
 }
 
 squares[currentPosition].classList.add("tank")
