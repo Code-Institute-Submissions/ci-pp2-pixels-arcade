@@ -143,13 +143,13 @@ Dead Heads Memory Game is a classic card game where the user matches pairs while
 - Instructions:
   - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
 - Buttons:
-  - On selecting a difficulty, a board of six, eight or 10 pairs of cards is generated and displayed. 
+  - On selecting a difficulty, a board of six, eight or ten pairs of cards is generated and displayed. 
   - The difficulty buttons are disabled during gameplay to prevent generating further cards.
   - The selected difficulty is bolded and underlined.
   - The reset button can be used at any time to reload the page.
 - Gameplay:
   - On game start, the timer begins.
-  - The user can flip two cards at a time only. If the cards match, they remain face up, the pairs tally is incremented, and the user can select a further two cards. If they do not match, the cards flip back over, the attemps tall is incremented, and the user can then select two more cards to flip.
+  - The user can flip two cards at a time only. If the cards match, they remain face up, the pairs tally is incremented, and the user can select a further two cards. If they do not match, the cards flip back over, the attemps tally is incremented, and the user can then select two more cards to flip.
   - Upon successfully matching all pairs on the board, the Game Over overlay appears with the number of pairs the user has matched and the time in which the user has done so. The user then has the option to play again or return to the index page.
 
 ## Space Invaders
@@ -159,19 +159,19 @@ Dead Heads Memory Game is a classic card game where the user matches pairs while
 ![Space Invaders](readme-docs/invaders.webp)
 </details>
 
-Space Invaders is a classic arcade game in which the user controlling a sprite at the bottom of the screen must shoot enemies before they reach the bottom of the screen. It features instructions, buttons to start the game, change the enemy wrap or reset the page, displays for lives and the score, and on-screen controls.
+Space Invaders is a classic arcade game in which the user controls a sprite and must shoot enemies before they reach the bottom of the screen. It features instructions, buttons to start the game, change the enemy wrap or reset the page, displays for lives and the score, and on-screen controls.
 - Instructions:
   - If the user hovers over the instructions text, their cursor changes to a pointer and the text becomes underlined to indicate they can click. This displays the instructions overlay which gives a brief introduction to the game and can be dismissed by clicking "Got It!"
 - Buttons:
   - The user can begin the game by selecting the start button.
-  - The user can change how to enemies move across the page by clicking the wrap button.
+  - The user can change how to enemies move across the game board by clicking the wrap button.
   - The user can reset the page at any point with the reset button.
 - Gameplay:
   - On game start, the invaders are generated and begin to move across the game board. After a set period of time, an enemy spaceship or "boss" appears which moves back and forth at the top of the screen and drops bombs which can damage the tank below.
   - Using either keyboard or on-screen controls, the user can move the tank left or right at the bottom of the screen and fire a missile at the enemies.
-  - In line with the Rule of Three, the tank has each lives, which can be lost when hit with the bomb. And the boss must be hit three times to destory it.
+  - In line with the Rule of Three, the tank has three lives, which can be lost when hit with the bomb. And the boss must be hit three times to destory it.
   - When an invader is killed the score is incremented and when the tank is hit the lives display decreases by one.
-  - The game can by won by destroying all the invaders and the boss. The game is lost when the invaders reach the bottom of the screen or the tank, or the tank loses all its lives.
+  - The game can by won by destroying all the invaders and the boss. The game is lost when the invaders reach the bottom of the screen or touch the tank, or the tank loses all of its lives.
   - When the game ends, the Game Over overlay is displayed telling the user if they lived or died and displays the number of invaders killed.
 
 ## 404 Page
@@ -186,20 +186,20 @@ The 404 page is very simply styled. It features a link styled as a button that d
 The website is designed with expansion in mind.
 1. _Additional games_. There are four playable games currently available on the site. These games were chosen from ten that I have been working on as they are the most interesting and complete at the time of starting the project. The intention is to expand with further games.
 2. _Expanding current games_.
-  - Slap-a-Rabbit:
-    - Additional difficulty levels with a large board, more holes and more variety in speed.
-  - Rock, Paper, Scissors:
-    - Different game modes with an expanded range of choices, e.g. Rock, Paper, Scissors, Lizard, Spock.
-  - Dead Heads Memory Game:
-    - Additional levels with a larger board and more cards.
-    - New difficulty challenge including a timer so the user has to race against the clock.
-  - Space Invaders:
-    - Additional levels including different patterns for the invaders, different or increasing speeds, and new enemies.
-    - The option for a progressive game where new enemies are spawned either after a certain time or upon removal of all currently enemies and the score and lives are carried forward.
+    - Slap-a-Rabbit:
+      - Additional difficulty levels with a large board, more holes and more variety in speed.
+    - Rock, Paper, Scissors:
+      - Different game modes with an expanded range of choices, e.g. Rock, Paper, Scissors, Lizard, Spock.
+    - Dead Heads Memory Game:
+      - Additional levels with a larger board and more cards.
+      - New difficulty challenge including a timer so the user has to race against the clock.
+    - Space Invaders:
+      - Additional levels including different patterns for the invaders, different or increasing speeds, and new enemies.
+      - The option for a progressive game difficulty where new enemies are spawned either after a certain time or upon removal of all current enemies and the score and lives are carried forward.
 3. _High scores_. A separate page where scores can be imported, stored and updated upon completion of a game. It could be unique to the individual user to track themselves or available to anyone who uses the site to compare and compete with other users, or both. This may have to include having users create profiles, or perhaps they could be prompted to enter their initials on completion of the game, like in an arcade.
 4. _Game sections_. Currently unnecessary, but if the website were to expand there could be the potential to include game categories, e.g.:
-  - Having separate single-player or multiplayer sections so that users can browse games they can play against other people.
-  - Device specific categories. Not all games are suited to touchscreens. While they can be adapted in some ways, like Space Invaders, it may be necessary in some cases to state clearly to users whether they can play a particular game on their device.
+    - Having separate single-player or multiplayer sections so that users can browse games they can play against other people.
+    - Device specific categories. Not all games are suited to touchscreens. While they can be adapted in some ways, like Space Invaders, it may be necessary in some cases to state clearly to users whether they can play a particular game on their device.
 5. _Support or contact page_. If a website such as this were to be available to users in real life, a method for users to report bugs or ask for help would be necessary.
 6. _Options menu_. To allow the user to control display and sound settings.
 
@@ -224,7 +224,7 @@ Google Fonts was used to import the Press Play 2P font to style.css. This is the
 ## Buttons and Links
 
 - Links are styled with a dark green transition to provide feedback to the user when hovered over.
-- Level and reset buttons are styled with green text on black and transition to white on green when hovered over. When selected, the font-weight increases and green underline is applied to mark which level is active. 
+- Level and reset buttons are styled with green text on black and transition to white on green when hovered over. When selected, the font-weight increases and a green underline is applied to mark which level is active. 
 - Overlay buttons are styled with black text on a white background to stand out on the black overlay. When hovered over, they transition to white text on a dark green background.
 - Though not explicitly a link or button, the instructions text on each game is styled so a underline appears when hovered over to indicate to the user that it is interactive. 
 
@@ -243,7 +243,7 @@ Rock, Paper, Scissors is very minimalistically designed as the choice of using t
 Dead Heads Memory Game has a slightly more morbid design purely due to the fact that I have a large collection of images I had previously created for other projects. However, they created an interesting, memorable look on the black cards.
 
 ### Space Invaders
-Space Invaders is a classic arcade game. The intention was to honour that when creating the sprites and so this game ended up most closely matching the overall style of the website. The explosion sound use is reminiscent of classic arcade sounds. 
+Space Invaders is a classic arcade game. The intention was to honour that when creating the sprites and so this game ended up most closely matching the overall style of the website. The explosion sound used is reminiscent of classic arcade sounds. 
 
 The "invaders" are a modified version of the website's logo. The controls are very minimalist and easy to understand. The game board itself features a box-shadow to "lift" the game off the page to attempt to give the feeling of a screen sitting up in front of you like an arcade cabinet.
 
@@ -330,7 +330,7 @@ JSHint was used to detect errors in the JavaScript.
   - This occurred due to the ternary operator.
 - One warning was flagged in invaders.js:
   - "129	Expected an assignment or function call and instead saw an expression."
-  - This occurred due to the placement of bombInterval within the moveBoss function, however it does not prevent the code from running as intended.
+  - This occurred due to the placement of bombInterval within the moveBoss function.
 
 ## Lighthouse
 The site was tested using Lighthouse in Chrome DevTools throughout the development to check performance, accessibiltiy, best practices and SEO. The final test on Lighthouse was run on incognito mode. The results are below.
@@ -354,7 +354,7 @@ The website was tested on the above browsers for these functionality tests.
 <details>
 <summary>Universal Features Testing</summary>
 
-![Universal Features](readme-docs/pp2-testing-universal)
+![Universal Features](readme-docs/pp2-testing-universal.png)
 </details>
 
 <details>
@@ -388,14 +388,14 @@ The website was tested on the above browsers for these functionality tests.
 
 - "As a user, I would like to easily understand the game I am playing"
   - All games present on the website are simple, classic games that are intuitive to play.
-  - All game pages feature an instruction overlay that can be displayed when the user clicks on "Instructions" directly below the the game's title. The basics of the game are presented to user and they can reference this overlay whenever they wish.
+  - All game pages feature an instruction overlay that can be displayed when the user clicks on "Instructions" directly below the the game's title. The basics of the game are presented to the user and they can reference this overlay whenever they wish.
 
 - "As a user, I would like to select the level of difficulty"
   - Two of the games available on the website feature difficulty levels.
     - In Slap-a-Rabbit, the user can select between three levels with increasing gameplay speeds.
     - In Dead Heads Memory Game, the user can select between three levels which generate increasing numbers of pairs of cards to match.
   - Rock, Paper, Scissors allows the user to select the length of the game, however this does not really effect the "difficulty" of the game itself.
-  - Currently, Space Invaders does not feature level difficulties.
+  - Currently, Space Invaders does not feature difficulty levels.
 
 - "As a user, I would like feedback on my progress in the game as I am playing"
   - In Slap-a-Rabbit, above the board there is a timer counting down for 30 seconds so that the user may monitor the length of time they have remaining. There is also a "slaps" counter that provides the user a running tally of the points as they play.
@@ -414,27 +414,27 @@ The website was tested on the above browsers for these functionality tests.
 ### Fixed Bugs
 - Dead Heads Memory Game:
   1. On iPhone, images were not displaying correctly when cards flipped.
-    - Safari was not handling transform correctly prior to the addition of "translateZ(1px)" 
-    - The solution was found in this [thread on Stack Overflow](https://stackoverflow.com/questions/59716761/flip-card-bug-safari)
+      - Safari was not handling transform correctly prior to the addition of "translateZ(1px)" 
+      - The solution was found in this [thread on Stack Overflow](https://stackoverflow.com/questions/59716761/flip-card-bug-safari)
 
 - Space Invaders:
   1. On iPhone, the "explosion" sound effect was not playing correctly.
-    - This is due to iOS not allowing autoplay of sound. The user has to trigger sound through an interaction. Once it has been played once, it will work as intended.
-    - While it is not a perfect solution, the sound is muted and triggered on game start, then unmuted when the shoot or dropBomb functions are called. So, the sound now plays as intended.
-    - In future, the intention is to introduce a menu where the user can adjust their audio settings so that they have control volume or mute sounds.
+      - This is due to iOS not allowing autoplay of sound. The user has to trigger sound through an interaction. Once it has been played once, it will work as intended.
+      - While it is not a perfect solution, the sound is muted and triggered on game start, then unmuted when the shoot or dropBomb functions are called. So, the sound now plays as intended.
+      - In future, the intention is to introduce a menu where the user can adjust their audio settings so that they have control volume or mute sounds.
   2. While it did not prevent gameplay, when a missile exited the top of the screen, or a bomb or invader exited the bottom of the screen, the sprites were removed but in console the following error was logged indefinitely: "Uncaught TypeError: Cannot read properties of undefined (reading 'classList')".
-    - I believe this was due to JS looking for the next div, but as it had reached the top or bottom of the grid of divs there was nowhere to look.
-    - A somewhat hacky way to fix this involved extending the grid and telling JS to remove the "bombs" or "invaders" a row earlier in the grid. And similarly at the top of the game grid, the missile is removed before it actually reaches the top row.
+      - I believe this was due to JS looking for the next div, but as it had reached the top or bottom of the grid of divs there was nowhere to look.
+      - A somewhat hacky way to fix this involved extending the grid and telling JS to remove the "bombs" or "invaders" a row earlier in the grid. And similarly at the top of the game grid, the missile is removed before it actually reaches the top row.
   3. The game would end prematurely if all invaders were removed but the boss was still alive.
-    - This was a two part problem. The first simply involved changing the win conditions so that the game didn't count the user as winning unless both invaders and boss were dead.
-    - However, there was also an issue where though the invaders were removed, the game was still tracking the progress of their array down the grid. So, a variable of invadersDead was added that is just a simple boolean. It's initially declared as false. When all invaders are removed, now instead of calling checkEnd() the moveInvaders function changes invadersDead to true and we also clear the interval to stop the game moving them even though they're gone. If invadersDead is true and bossDied is true, the user wins and the user no longer loses from the game moving invisible invaders.
+      - This was a two part problem. The first simply involved changing the win conditions so that the game didn't count the user as winning unless both invaders and boss were dead.
+      - However, there was also an issue where though the invaders were removed, the game was still tracking the progress of their array down the grid. So, a variable of invadersDead was added that is just a simple boolean. It's initially declared as false. When all invaders are removed, now instead of calling checkEnd() the moveInvaders function changes invadersDead to true and we also clear the interval to stop the game moving them even though they're gone. If invadersDead is true and bossDied is true, the user wins and the user can no longer lose from the game moving invisible invaders.
 
 ### Known Bugs
 - Space Invaders :
-  1. Similarly to the bugs above, there is a bug with triggering the game end when the invaders reach the bottom of the screen.
-    - The game triggers when the bottom row of invaders reach the divs just below the tank. This means if they're present they are visible below the screen when the Game Over screen displays. If they are not present, the game appears to end before the top row of invaders reaches the very end of the screen.
-    - At present, this bug doesn't have a very large impact on gameplay and is more aesthetically displeasing.
-    - Currently considered fixes include adding a class to the bottom divs that the game can look for to trigger the end when it overlaps with an invader, or to expand on the design of the board so it appears more natural that the game ends when the invaders reach a certain point. The latter, however, wouldn't prevent the user feeling cheated when the top invaders trigger a game over higher on the screen.
+  1. Similarly to the bugs above, there is a bug that involves triggering the game end when the invaders reach the bottom of the screen.
+      - The game triggers when the bottom row of invaders reach the divs just below the tank. This means if they're present they are visible below the screen when the Game Over screen displays. If they are not present, the game appears to end before the top row of invaders reaches the very end of the screen.
+      - At present, this bug doesn't have a very large impact on gameplay and is more aesthetically displeasing.
+      - Currently considered fixes include adding a class to the bottom divs that the game can look for to trigger the end when it overlaps with an invader, or to expand on the design of the board so it appears more natural that the game ends when the invaders reach a certain point. The latter, however, wouldn't prevent the user feeling cheated when the top invaders trigger a game over higher on the screen.
 
 # Deployment
 ## Steps to deploy site:
