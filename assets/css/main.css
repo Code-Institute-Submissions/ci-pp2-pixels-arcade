@@ -140,18 +140,18 @@ button:hover {
 
 .pop-up-card {
   width: 100%;
-  height: 100%;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .pop-up-card p {
   font-weight: 200;
-  font-size: 0.75em;
-  margin: 10px 0;
+  font-size: 1em;
+  padding: 1em 0;
 }
 
 #intro {
