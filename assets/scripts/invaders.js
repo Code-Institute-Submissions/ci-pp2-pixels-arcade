@@ -39,7 +39,7 @@ let bombInterval
 // Explosion sound effect
 let soundExplosion = new Audio("assets/sounds/explosion.mp3")
 soundExplosion.volume = 0.1
-soundExplosion.playbackRate = 2
+soundExplosion.playbackRate = 4
 
 // Our for loop creating our board
 for (let i = 0; i < 255; i++) {
@@ -296,6 +296,8 @@ function endGame() {
 
 // startGame function 
 function startGame() {
+  soundExplosion.muted
+  soundExplosion.play()
   startButton.removeEventListener("click", startGame)
   intervalTime = 500
   invadersId = setInterval(moveInvaders, intervalTime)
