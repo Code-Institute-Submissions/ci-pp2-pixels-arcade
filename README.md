@@ -200,7 +200,8 @@ The website is designed with expansion in mind.
 4. _Game sections_. Currently unnecessary, but if the website were to expand there could be the potential to include game categories, e.g.:
   - Having separate single-player or multiplayer sections so that users can browse games they can play against other people.
   - Device specific categories. Not all games are suited to touchscreens. While they can be adapted in some ways, like Space Invaders, it may be necessary in some cases to state clearly to users whether they can play a particular game on their device.
-  5. _Support or contact page_. If a website such as this were to be available to users in real life, a method for users to report bugs or ask for help would be necessary.
+5. _Support or contact page_. If a website such as this were to be available to users in real life, a method for users to report bugs or ask for help would be necessary.
+6. _Options menu_. To allow the user to control display and sound settings.
 
 # Design
 
