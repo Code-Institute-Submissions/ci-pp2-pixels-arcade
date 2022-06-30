@@ -477,3 +477,6 @@ With the exception of the images for Rock, Paper, Scissors, I created the images
   - [Slap-a-Rabbit hit sound](https://pixabay.com/sound-effects/karate-chop-6357/) by ccolbert70Eagles23
   - [Dead Heads Memory Game flip sound](https://pixabay.com/sound-effects/book-page-45210/) by fellur
   - [Space Invaders explosion sound](https://pixabay.com/sound-effects/8-bit-explosion1wav-14656/) by timgormly
+
+## Acknowledgements 
+I would like to thank my mentor, Brian Macharia, for all the time he took to help me with this project. He provided excellent feedback and encouragement, and helped to make the project a lot of fun to build!
