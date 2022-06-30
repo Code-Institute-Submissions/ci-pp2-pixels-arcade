@@ -187,35 +187,25 @@ function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name
 
   if (isMatch) {
-    disableCards()
+    firstCard.removeEventListener("click", flipCard)
+    secondCard.removeEventListener("click", flipCard)
+    matchedCards++
+    matches.innerHTML = matchedCards
+    hasFlippedCard = false
+    lockBoard = false
+    firstCard = null
+    secondCard = null
   } else {
-    unflipCards()
-  }
-}
-
-// Our disableCard function once we have a pair
-function disableCards() {
-  firstCard.removeEventListener("click", flipCard)
-  secondCard.removeEventListener("click", flipCard)
-  matchedCards++
-  matches.innerHTML = matchedCards
-  resetBoard()
-}
-
-// Our unflipCards function that removes the flip class
-function unflipCards() {
-  lockBoard = true
-  setTimeout(() => {
-    firstCard.classList.remove("flip")
-    secondCard.classList.remove("flip")  
-    resetBoard()  
+    lockBoard = true
+    setTimeout(() => {
+      firstCard.classList.remove("flip")
+      secondCard.classList.remove("flip")  
+      hasFlippedCard = false
+      lockBoard = false
+      firstCard = null
+      secondCard = null
     }, 1000)
-}
-
-// Our reset board function to call after we've unflipped our cards
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false]
-  [firstCard, secondCard] = [null, null]
+  }
 }
 
 /**
