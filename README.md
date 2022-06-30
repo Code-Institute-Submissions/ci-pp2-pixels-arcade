@@ -323,11 +323,6 @@ All pages passed CSS3 validation, however there were 8 warnings for cards.css re
 
 JSHint was used to detect errors in the JavaScript.
 - All JavaScript files were flagged for missing semicolons, as expected.
-- An unused variable was flagged in rabbit.js due to the reset button not being handled correctly in the DOM. This was corrected.
-- No warnings were flagged in rps.js.
-- One warning was flagged in cards.js:
-  - "184	Expected an assignment or function call and instead saw an expression."
-  - This occurred due to the ternary operator.
 - One warning was flagged in invaders.js:
   - "129	Expected an assignment or function call and instead saw an expression."
   - This occurred due to the placement of bombInterval within the moveBoss function.

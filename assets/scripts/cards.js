@@ -2,6 +2,7 @@
 const levelEasy = document.getElementById("easy")
 const levelMedium = document.getElementById("medium")
 const levelHard = document.getElementById("hard")
+const reset = document.getElementById("reset")
 const openInstructions = document.getElementById("instructions")
 const closeInstructions = document.getElementById("close-pop-up")
 
@@ -185,7 +186,11 @@ function createCards() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name
 
-  isMatch ? disableCards() : unflipCards()
+  if (isMatch) {
+    disableCards()
+  } else {
+    unflipCards()
+  }
 }
 
 // Our disableCard function once we have a pair
