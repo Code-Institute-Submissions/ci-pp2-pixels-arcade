@@ -42,9 +42,15 @@ soundExplosion.volume = 0.1
 soundExplosion.playbackRate = 4
 
 // Our for loop creating our board
-for (let i = 0; i < 240; i++) {
+for (let i = 0; i < 225; i++) {
   const square = document.createElement("div")
   board.appendChild(square)
+}
+
+for (let i = 0; i < width * 3; i++) {
+  const endTile = document.createElement("div")
+  endTile.classList.add("end-tile")
+  board.appendChild(endTile)
 }
 
 const squares = Array.from(document.querySelectorAll("#board div"))
@@ -156,7 +162,7 @@ function spawnBoss() {
     bombPosition += width
     squares[bombPosition].classList.add("bomb")
 
-    if (bombPosition > (squares.length - 16)) {
+    if (bombPosition > (squares.length - 46)) {
       squares[bombPosition].classList.remove("bomb")
       clearInterval(bombId)
       return
@@ -269,8 +275,8 @@ function checkEnd() {
         endGame()
     }
     
-  for (let i = 0; i < (invaders.length); i++) {
-    if (invaders[i] > (squares.length - 16)) {
+  for (let i = 0; i < (squares.length); i++) {
+    if (squares[i].matches(".invader.end-tile")) {
       gameEnd = "DIED"
       endGame()
     }
