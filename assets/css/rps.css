@@ -47,13 +47,6 @@
 }
 
 /* Media queries */
-/* Large screens */
-@media (min-width: 1200px) and (min-height: 1200px) {
-  html {
-    font-size: 150%;
-  }
-}
-
 /* Small screens */
 @media (max-height: 860px),
 (max-width: 900px) {
