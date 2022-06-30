@@ -40,6 +40,7 @@
   border-radius: 20px;
 }
 
+/* Media queries */
 @media (max-width: 840px),
 (max-height: 810px) {
   .game-selection {
