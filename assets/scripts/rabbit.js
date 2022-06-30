@@ -92,6 +92,7 @@ function levelThree() {
  * Math.floor makes it a whole integer
  * @param {array} holes - takes our holes array
  * @return {variable} hole - returns a hole div to pop out of
+ * From Franks Laboratory (see credit)
  */
 function randomHole(holes) {
   let pickHole = Math.floor(Math.random() * numberOfHoles)
@@ -134,6 +135,7 @@ function popUp() {
     speed = levelSpeed(400, 1000)
   }
   
+  // Adapted from Franks Laboratory (see credit)
   let hole = randomHole(holes)
   hole.classList.add("up")
   setTimeout(() => {
@@ -146,6 +148,7 @@ function popUp() {
  * The slap function increments the points when a rabbit is clicked.
  * It also changes the image, which then changes back with the aid of the setTimeout function.
  * PointerEvents are paused for the rabbit to prevent the user from clicking multiple times
+ * Adapted from Franks Laboratory
  */
  function slap(){
   points++
@@ -165,6 +168,7 @@ function popUp() {
  * and calls the popUp function
  * The setInterval function within begins the countdown that eventually ends the game, stops the popUp
  * function and displays the game over screen with the user's score
+ * Adapted from Frank's Laboratory
  */
 function startGame() {
   createHoles()
