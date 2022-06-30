@@ -42,7 +42,7 @@ soundExplosion.volume = 0.1
 soundExplosion.playbackRate = 4
 
 // Our for loop creating our board
-for (let i = 0; i < 225; i++) {
+for (let i = 0; i < 210; i++) {
   const square = document.createElement("div")
   board.appendChild(square)
 }
@@ -162,7 +162,7 @@ function spawnBoss() {
     bombPosition += width
     squares[bombPosition].classList.add("bomb")
 
-    if (bombPosition > (squares.length - 46)) {
+    if (bombPosition > (squares.length - 31)) {
       squares[bombPosition].classList.remove("bomb")
       clearInterval(bombId)
       return
