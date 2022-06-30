@@ -79,6 +79,19 @@ function remove() {
   }
 }
 
+// Function to change wrap for invaders
+function changeWrap() {
+  if (noWrap === true) {
+    noWrap = false
+    wrap.innerHTML = "ON"
+    return
+  } else if (noWrap === false) {
+    noWrap = true
+    wrap.innerHTML = "OFF"
+  }
+  return 
+}
+
 // Move the invaders back and forth across the screen
 function moveInvaders() {
   const leftEdge = invaders[0] % width === 0
@@ -112,19 +125,6 @@ function moveInvaders() {
     clearInterval(invadersId)
   }
   checkEnd()
-}
-
-// Function to change wrap for invaders
-function changeWrap() {
-  if (noWrap === true) {
-    noWrap = false
-    wrap.innerHTML = "ON"
-    return
-  } else if (noWrap === false) {
-    noWrap = true
-    wrap.innerHTML = "OFF"
-  }
-  return 
 }
 
 // Function to spawn the boss ship and move it back and forth
