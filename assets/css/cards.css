@@ -74,6 +74,8 @@
   background-color: transparent;
 }
 
+/* Media queries */
+/* Large screens */
 @media (min-width: 2250px) {
   .card {
     width: 150px;
@@ -81,6 +83,7 @@
   }
 }
 
+/* Small screens */
 @media (max-width: 1180px) {
   h2 {
     font-size: 1em;
