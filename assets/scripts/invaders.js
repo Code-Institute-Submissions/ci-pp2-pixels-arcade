@@ -41,7 +41,10 @@ let soundExplosion = new Audio("assets/sounds/explosion.mp3")
 soundExplosion.volume = 0.1
 soundExplosion.playbackRate = 4
 
-// Our for loop creating our board
+/**
+ * Our for loop creating our board
+ * From Ania Kubow (see credits)
+ */
 for (let i = 0; i < 210; i++) {
   const square = document.createElement("div")
   board.appendChild(square)
@@ -56,14 +59,20 @@ for (let i = 0; i < width * 3; i++) {
 
 const squares = Array.from(document.querySelectorAll("#board div"))
 
-// Our invaders array
+/**
+ * Our invaders array, could create multiple arrays to call depending on level
+ * From Ania Kubow (see credits)
+ */
 const invaders = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
   15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
   30, 31, 32, 33, 34, 35, 36, 37, 38, 39
 ]
 
-// Function to add invaders to the board
+/**
+ * Function to add invaders to the board
+ * From Ania Kubow (see credits)
+ */
 function draw() {
   for (let i = 0; i < invaders.length; i++) {
     if (!invadersRemoved.includes(i)){
@@ -72,7 +81,10 @@ function draw() {
   }
 }
 
-// Function to remove invaders from the board
+/**
+ * Function to remove invaders from the board
+ * From Ania Kubow 
+ */ 
 function remove() {
   for (let i = 0; i < invaders.length; i++) {
     squares[invaders[i]].classList.remove("invader")
@@ -92,7 +104,10 @@ function changeWrap() {
   return 
 }
 
-// Move the invaders back and forth across the screen
+/**
+ * Move the invaders back and forth across the screen
+ * Adapted from Ania Kubow (see credits)
+ */
 function moveInvaders() {
   const leftEdge = invaders[0] % width === 0
   const rightEdge = invaders[invaders.length - 1] % width === width - 1
@@ -200,6 +215,7 @@ function spawnBoss() {
 /**
  * shoot function to create and move the missile and kill invaders.
  * Can trigger with up arrow, space or fire button on page
+ * Adapted from Ania Kubow (see credits)
  */ 
 function shoot(event) {
   soundExplosion.muted = false
