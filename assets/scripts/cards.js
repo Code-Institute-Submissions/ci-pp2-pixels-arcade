@@ -12,7 +12,10 @@ let attempts = document.getElementById("flips")
 let endScore = document.getElementById("end-score")
 let endTime = document.getElementById("end-time")
 
-// Our card array for the cards we'll generate
+/**
+ * Our card array for the cards we'll generate
+ * Like Tania Rascia's array (see credits) 
+ */ 
 const cardsArray = [
   {
     name: "cat",
@@ -97,10 +100,13 @@ let soundFlip = new Audio("assets/sounds/flip.mp3")
 soundFlip.volume = 0.5
 soundFlip.playbackRate = 5
 
-// Starting to construct the board
+/**
+ * Starting to construct the board
+ * Again, adapted from Tania Rascia (see credits)
+ */
 const board = document.getElementById("board")
 const grid = document.createElement("div")
-grid.setAttribute("class", "grid")
+grid.classList.add("grid")
 board.appendChild(grid)
 
 /**
@@ -131,6 +137,7 @@ function numberOfCards () {
  * Then create divs and add the classes card, front-face and back-face,
  * so we can add our EventListener, and style the cards so they can be flipped
  * And append everything together
+ * Adapted from Tania Rascia (see credits)
  */
 function createCards() {
   gameCards.sort(() => 0.5 - Math.random())
@@ -159,7 +166,8 @@ function createCards() {
  * We can't flip again once it's selected
  * We can only flip two cards at a time
  * It increments our attempts (increments after the second flip)
- * Then we check for a match 
+ * Then we check for a match
+ * Adapted from Marina Ferrerira (see credits) 
  */
  function flipCard() {
   if (lockBoard) return
@@ -182,7 +190,10 @@ function createCards() {
   checkForMatch()
 }
 
-// We compare the cards by their name and either disable the cards(they're a match!) or unflip them
+/**
+ * We compare the cards by their name and either disable the cards(they're a match!) or unflip them
+ * Adapted from Marina Ferreira (see credits)
+ */
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name
 
