@@ -5,7 +5,7 @@
 
 /* Styling for menu section of index.html */
 #game-list {
-  height: 60vh;
+  min-height: 60vh;
   width: 80%;
   margin-top: 5%;
   margin-bottom: 10%;
@@ -31,6 +31,7 @@
 }
 
 .title {
+  color: var(--apple-black);
   font-size: 1.5rem;
 }
 
