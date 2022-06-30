@@ -423,9 +423,9 @@ The website was tested on the above browsers for these functionality tests.
   3. The game would end prematurely if all invaders were removed but the boss was still alive.
       - This was a two part problem. The first simply involved changing the win conditions so that the game didn't count the user as winning unless both invaders and boss were dead.
       - However, there was also an issue where though the invaders were removed, the game was still tracking the progress of their array down the grid. So, a variable of invadersDead was added that is just a simple boolean. It's initially declared as false. When all invaders are removed, now instead of calling checkEnd() the moveInvaders function changes invadersDead to true and we also clear the interval to stop the game moving them even though they're gone. If invadersDead is true and bossDied is true, the user wins and the user can no longer lose from the game moving invisible invaders.
-    4. Similarly to the bugs above, there was a bug that involves triggering the game end when the invaders reach the bottom of the screen.
+  4. Similarly to the bugs above, there was a bug that involves triggering the game end when the invaders reach the bottom of the screen.
       - There was difficulty getting the game to trigger when the invaders reached the bottom of the screen. One hacky solution involved triggering the end of the game when the invaders array reached a certaion point in the squares array but this didn't account for invaders removed so the top row of invaders never reached the bottom even when no bottom invaders were visible to the player.
-      - Fixed as of 30/06. Created divs with an end-tile class that endGame now looks for and if a div contains both invaders and end-tile, the game ends. Still a little hacky as there are two rows of divs not visible below the game-board, but unfortunately without those the bomb and invaders trigger the error mentioned in _2_ above.
+      - Fixed as of 30/06. Created divs with an end-tile class that endGame now looks for and if a div contains both invaders and end-tile, the game ends. Still a little hacky as there are two rows of divs not visible below the game-board, but unfortunately without those the bomb and invaders trigger the error mentioned in **2** above.
 
 ### Known Bugs
 None currently.
