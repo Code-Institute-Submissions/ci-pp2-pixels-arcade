@@ -54,6 +54,7 @@
   content: "";
   display: block;
   background-image: url("../images/rabbit/hole.png");
+  background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   bottom: -20px;
@@ -96,6 +97,12 @@
   }
   .hole::after {
     bottom: -30px;
+  }
+}
+
+@media (max-width: 319px) {
+  .hole::after {
+    bottom: -34px;
   }
 }
 
