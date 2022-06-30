@@ -42,6 +42,7 @@ function playFive() {
 /**
  * We use the forEach method set the userPick variable from the ID of the image they selected
  * And then call userChoice to display an image, and call computerChoice and compare
+ * From Ania Kubow (see credits)
  */
  choices.forEach(choice => choice.addEventListener("click", (event) => {
   userPick = event.target.id
@@ -68,6 +69,7 @@ function userChoice() {
  * We could hardcode 3 for choices.length as we're only deciding between 3 options, but
  * if we decide to add an option for the user to select between classic RPS and Rock, Paper,
  * Scissors, Lizard, Spock or another varient, using a global variable makes it more dynamic
+ * Adapted from Ania Kubow (see credits)
  */
 function computerChoice() {
   const randomChoice = Math.floor(Math.random() * choices.length)
@@ -89,6 +91,7 @@ function computerChoice() {
  * Our compare function compares the picks, increment points and update
  * our round results
  * It also increments the rounds, displays results and calls endGame to check for a winner
+ * Adapted from Ania Kubow (see credits)
  */
  function compare() {
   if (computerPick === "rock" && userPick === "paper") {
