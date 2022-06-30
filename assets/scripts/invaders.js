@@ -47,6 +47,7 @@ for (let i = 0; i < 210; i++) {
   board.appendChild(square)
 }
 
+// Adding end tiles to board 
 for (let i = 0; i < width * 3; i++) {
   const endTile = document.createElement("div")
   endTile.classList.add("end-tile")
