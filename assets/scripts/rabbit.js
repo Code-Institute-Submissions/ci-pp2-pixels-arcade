@@ -22,7 +22,6 @@ let holesArray = []
 let holes = []
 let rabbits = []
 
-
 // Hit sound
 let soundHit = new Audio("assets/sounds/hit.mp3")
 soundHit.volume = 0.3
@@ -44,32 +43,6 @@ function createHoles() {
     board.appendChild(hole)
     hole.appendChild(rabbit)  
   }
-}
-
-/** 
- * Function to pick a random hole to pop out of
- * Using Math.random to generate a random number up to the number of holes we're generating.
- * Math.floor makes it a whole integer
- */
-function randomHole(holes) {
-  let pickHole = Math.floor(Math.random() * numberOfHoles)
-  let hole = holes[pickHole]
-
-  // We don't want the rabbit to pop out of the same hole multiple times in a row
-  if (hole === lastHole) {
-    return randomHole(holes)
-  }
-
-  lastHole = hole
-  return hole
-}
-
-/**
- * We want the rabbit to pop up at varying speeds within parameters we'll set, so the levelSpeed
- * function generates random numbers between our min and max
- */
-function levelSpeed(min, max) {
-  return Math.round(Math.random() * (max - min) + min)
 }
 
 // Function to disable the level buttons
@@ -113,13 +86,44 @@ function levelThree() {
   startGame()
 }
 
+/** 
+ * Function to pick a random hole to pop out of; used in our popUp function
+ * Using Math.random to generate a random number up to the number of holes we're generating.
+ * Math.floor makes it a whole integer
+ * @param {array} holes - takes our holes array
+ * @return {variable} hole - returns a hole div to pop out of
+ */
+function randomHole(holes) {
+  let pickHole = Math.floor(Math.random() * numberOfHoles)
+  let hole = holes[pickHole]
+
+  // We don't want the rabbit to pop out of the same hole multiple times in a row
+  if (hole === lastHole) {
+    return randomHole(holes)
+  }
+
+  lastHole = hole
+  return hole
+}
+
+/**
+ * We want the rabbit to pop up at varying speeds within parameters we'll set, so the levelSpeed
+ * function generates random numbers between our min and max
+ * @param {number} min - the minimum speed we want rabbits to pop up
+ * @param {number} max - the maximum speed we want rabbits to pop up
+ * @return {number} - a random number in between
+ */
+function levelSpeed(min, max) {
+  return Math.round(Math.random() * (max - min) + min)
+}
+
 /**
  * PopUp function to move the rabbits
- * First an if/else statement determines the speed based on the difficulty set previously
+ * First an if/else statement determines the speed based on the difficulty set previously,
+ * passes parameters into levelSpeed function
  * Then the "up" class is added to the holes to raise the rabbit and the setTimeout 
  * function removes that class based on the speed selected
  */
-
 function popUp() {
   let speed
   if (difficulty === "easy") {
