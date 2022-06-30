@@ -87,6 +87,8 @@
   font-weight: 700;
 }
 
+/* Media queries */
+/* Large Screens */
 @media (min-width: 1200px) and (min-height: 800px) {
   #board {
     width: 608px;
@@ -98,6 +100,7 @@
   }
 }
 
+/* Small screens */
 @media (max-width: 600px) {
   button {
     margin: 5px;
