@@ -120,7 +120,7 @@ button:hover {
   font-weight: 600;
 }
 
-/* Styling for game over */
+/* Styling for overlays for instructions and game over */
 .pop-up {
   background-color: var(--apple-black);
   color: var(--apple-light-green);
@@ -216,12 +216,15 @@ footer a {
   border-radius: 10px;
 }
 
+/* Media queries */
+/* Large screens */
 @media (min-width: 2250px) {
   html {
     font-size: 150%;
   }
 }
 
+/* Small screens */
 @media (max-width: 840px) {
   #header-title {
     font-size: 1.5rem;
