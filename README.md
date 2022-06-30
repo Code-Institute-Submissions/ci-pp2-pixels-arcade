@@ -466,6 +466,7 @@ The live site can be found here: [Pixel's Arcade](https://sjecollins.github.io/c
 - The fix for the card flip not working correctly on iPhone came from this [Stack Overflow thread](https://stackoverflow.com/questions/59716761/flip-card-bug-safari)
 - The code to add sound effects is based on this [this tutorial by Mt. Ford Studios](https://www.youtube.com/watch?v=LfSBbrGqFV0&ab_channel=Mt.FordStudios)
 - The code to add the 404 page is based on [this video by Dani Krossing](https://www.youtube.com/watch?v=kPtS4vO42II&ab_channel=DaniKrossing)
+- The code to play the sound effects in the games is based on [this thread from Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio)
 
 
 ## Media
