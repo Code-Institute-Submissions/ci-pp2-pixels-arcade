@@ -428,7 +428,7 @@ The website was tested on the above browsers for these functionality tests.
       - Fixed as of 30/06. Created divs with an end-tile class that endGame now looks for and if a div contains both invaders and end-tile, the game ends. Still a little hacky as there are two rows of divs not visible below the game-board, but unfortunately without those the bomb and invaders trigger the error mentioned in **2** above.
 
 ### Known Bugs
-None currently.
+None known currently.
 
 # Deployment
 ## Steps to deploy site:
